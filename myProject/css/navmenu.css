@@ -1,0 +1,427 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header{
+	background-color:#e6e6e6;
+	/* padding-top: 8px; */
+	text-align: center;
+	height: 29px;
+	}
+.spacer{
+	color: #B6B6B6;
+	margin:6px 3px 3px 3px;
+	font-size: 12px;
+}
+.head-dt,.dt{
+	padding: 7px;
+	/* padding-top: 6px;
+	padding-bottom: 6px; */
+}
+#headnav .dt-login a{
+	display: inline-block;
+	width: 110px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.dt .overf{
+	color: red;
+}
+
+#adr1{
+	display: flex;
+	width: 40px;
+	padding-top: 6px;
+	/* float: left; */
+	padding-bottom: 2px;
+}
+.fr{
+	float: right;
+}
+#adr1 img{
+	height: 21px;
+	width: 15px;
+	vertical-align: bottom;
+}
+#adr1 a{
+	padding-top: 2px;
+}
+.head-address{
+	width: 290px;
+	height: 500px;
+	padding: 10px;
+	text-align: left;
+}
+.addr-con{
+	display: flex;
+	flex-wrap: wrap;
+}
+.addr-con .item{
+	width: 56px;
+	height: 30px;
+	padding: 2px 0px;
+	/* background: rgb(255, 198, 158); */
+}
+.addr-con .item-JS{
+	width: 56px;
+	height: 30px;
+	padding: 2px 0px;
+	/* background: rgb(255, 198, 158); */
+}
+.addr-con .item-JS a{
+	display: inline-block;
+	width: 28px;
+	height: 18px;
+	padding: 8px 9px;
+	background: rgb(223, 0, 0);
+	color: white;
+}
+
+.addr-con .item a{
+	display: inline-block;
+	font-size: 12px;
+	width: auto;
+	padding: 6px;
+	/* background: rgb(219, 112, 133); */
+	color: rgb(156, 156, 156);
+}
+.addr-con .item a:hover{
+	width: 30px;
+	height: 18px;
+	background: rgb(231, 231, 231);
+	color: rgb(201, 0, 0);
+}
+.addr-con2{
+	margin: 9px 9px 9px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3px 0px;
+	border-top:1px dashed rgb(228, 228, 228) ;
+	border-bottom:1px dashed rgb(228, 228, 228) ;
+}
+.con2-dt{
+	width: 250px;
+	height: 20px;
+	font-size: 12px;
+	padding: 6px;
+	color: rgb(156, 156, 156);
+}
+.con2-dd{
+	width:140px;
+	display: flex;
+	vertical-align: middle;
+}
+.addr-con3 .con2-dd img{
+	width:14px;
+	height: 14px;
+	
+}
+.addr-con2 .con2-dd a{
+	display: inline-block;
+	font-size: 12px;
+	padding: 6px;
+	/* background: rgb(219, 112, 133); */
+	color: rgb(156, 156, 156);
+}
+.addr-con3{
+	border-top:none;
+}
+/* 我的京东 */
+.myjd{
+	padding: 12px;
+	border-bottom: 1px solid #dddddd;
+	display: flex;
+}
+.myjd2{
+	padding: 12px;
+	display: flex;
+}
+.list1,.list2{
+	/* padding: 10px; */
+	text-align: left;
+	width: 120px;
+}
+.item,.item-bottom{
+	padding: 3px;
+}
+
+.procurement{
+	width: 150px;
+	padding: 12px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.procurement .item{
+	text-align: left;
+	width:60px;
+}
+/* 客户服务 */
+.cus-service{
+	border-bottom: 1px solid #dddddd;
+	width: 150px;
+	padding: 8px 10px 6px 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+/* 商户 */
+.shop-service{
+	width: 150px;
+	padding: 8px 10px 6px 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.item-dt{
+	padding: 4px;
+	text-align: left;
+	font-size: 12px;
+	font-weight: bolder;
+	width: 150px;
+	color: #6C6C6C;
+}
+.cus-service .item,.shop-service .item{
+	text-align: left;
+	width:69px;
+}
+/* 网站导航 */
+.web-nav{
+	padding:8px 10px 6px 15px;
+	display: flex;
+	text-align: left;
+	margin-top: 8px;
+	margin-bottom: 12px;
+	/* height: 250px; */
+}
+.web-nav .item{
+	width:90px;
+}
+.web-nav .item-dt{
+	margin-bottom: 5px;
+}
+/* 特色主题 */
+.theme .item-dt{
+	width: 260px;
+}
+.theme{
+	display: flex;
+	width: 300px;
+	flex-wrap: wrap;
+	height: 160px;
+}
+/* 行业频道-生活服务-更多精选 */
+.industry-channels,.life-service,.more-info{
+	border-left:1px solid #c9c9c9;
+	padding-left: 15px;
+	display: flex;
+	width: 200px;
+	flex-wrap: wrap;
+}
+/* 更多精选 */
+.more-info{
+	height: 150px;
+}
+/* 手机京东 */
+.mobileJD{
+	text-align: left;
+	margin-top: 5px;
+	width: 190px;
+	background-color: white;
+	position: absolute;
+	left: -100px;
+}
+/* 每行内容 */
+.mobileJD_list{
+	display: flex;
+	padding: 12px 6px;
+	border-bottom:1px solid gray;
+}
+.mobileJD_list>img{
+	/* display: flex; */
+	width: 66px;
+	height: 66px;
+	display: inline-block;
+	border: 1.5px solid rgba(163, 163, 163, 0.5);
+}
+.mobileJD_text{
+	margin-left: 6px;
+}
+.mobileJD_text img{
+	width: 20px;
+	height: 22px;
+}
+.mobileJD_text p{
+	/* margin-top: 5px; */
+	color: rgb(97, 97, 97);
+	font-weight: 700;
+	font-size: 12px;
+}
+.mobileJD_text span{
+	color: red;
+	font-size: 10px;
+}
+
+/*整个头部导航的样式*/
+#headnav{
+	width: 76%;
+    position: relative;
+}
+/*导航栏ul的样式*/
+#headnav ul {
+    list-style-type: none;
+    }
+/*第一级导航栏上面的文字的样式*/
+#headnav ul li{
+    float: left;
+    position: relative;
+    }
+/*导航栏超链接的样式*/
+#headnav ul li a {
+	font-size: 10px;
+    display: block;
+    text-decoration: none;
+    color: #989898;
+    }
+/*第二级菜单*/
+#headnav ul li .head-dd{
+	margin-left: 6px;
+	border-left: 1px solid  #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
+    display: none;
+	}
+/*鼠标放到第一级菜单时的样式*/
+#headnav a:hover {
+    color: #de0000;  
+    /* background-color: #ffffff; */
+    }
+#headnav ul li .head-dt:hover{
+    color: #de0000;  
+    background-color: #ffffff;
+}
+/*二级菜单的ul的样式*/
+#headnav ul li:hover .head-dd {
+	/* border: 1px solid #A9A9A9; */
+	/* height: 100px; */
+	padding: 0px;
+	margin: 0px;
+    display: block;
+	background-color: #ffffff;
+	position: absolute;
+	position: 10px 10px 10px 10px;
+	z-index: 55;
+    }
+/*鼠标移到第二级菜单上内容的样式*/
+#headnav ul li:hover ul li a:hover {
+    color: #c40000;
+    }
+
+
+/* 主内容区左侧的导航栏 */
+#nav{
+	position: relative;
+	height: auto;
+	width: 190px;
+	text-align: center;
+	margin-top: 10px;
+	}	
+/* 导航栏ul的样式 */
+#nav ul {
+	margin: auto;
+	padding: 0px;
+	/* display: block; */
+	list-style-type: none;
+	}	
+/* 第一级导航栏上面的文字样式 */
+#nav ul li{
+	background-color: white;
+	float: left;
+	/* position: relative; */
+	}
+/*导航栏超链接的样式*/
+#nav ul li .nav{
+		font-size: 13px;
+        width: 190px;
+        padding: 5px 0px 2px 0px;
+		height: 21px;
+        display: block;
+        color: #000000;
+    }
+/*鼠标放到第一级菜单时的样式*/
+#nav li .nav:hover {
+	color: #af0309; 
+	background-color: #cccccc;
+	}
+			
+/* 二级菜单 */
+#nav ul li .nav_l2{
+	background-color: white;
+	display: none;  /* 默认隐藏二级菜单的内容*/	
+	}
+/*二级菜单的ul的样式*/
+#nav ul li:hover .nav_l2 {
+	display: flex;
+	flex-direction: column;
+	width: 600px;
+	position: absolute;
+	left: 326px;
+	top: 0px;
+	z-index: 25;
+	}
+/*鼠标移到第二级菜单时的样式*/
+.category_channels a:hover {
+	background-color: #cd0000;
+}
+.category_channels{
+	display: flex;
+	margin-left:30px;
+}
+.category_channels a{
+	width: auto;
+	height: 16px;
+	margin: 16px 6px 8px 6px;
+	padding: 5px 10px;
+	font-size: 9px;
+	color: white;
+	background-color: #2f2f2f;
+}
+/* 二级导航内的详细信息 */
+.cate_detail{
+	display: flex;
+	flex-direction: column;
+}
+/* 每排详细信息 */
+.cate_detail dl{
+	display: flex;
+	margin: 5px;
+}
+.cate_detail dd{
+	/* display: flex;
+	flex-wrap: wrap; */
+	margin-left: 8px;
+}
+/* 信息标题 */
+.cate_detail_dt{
+	display: flex;
+	font-size: 9px;
+	font-weight: bolder;
+	text-align: right;
+/* background-color: #A9A9A9; */
+	margin-left: 25px;
+	padding: 4px;
+}
+.cate_detail_dt_a{
+	color: #2F2F2F;
+	width: 65px;
+}
+/* 信息栏 */
+.cate_detail_con{
+	/* margin: 5px; */
+	padding: 3px;
+	font-size: 10px;
+	text-decoration: none;
+	color: #5f5f5f;
+	float: left;
+}
+.cate_detail_con:hover,.cate_detail_dt_a:hover{
+	color: #B60000 ;
+}

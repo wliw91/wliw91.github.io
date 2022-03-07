@@ -1,0 +1,346 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* 一级ul样式 */
+.daily_price_tit ul{
+	/* background-color: #B7B7B7; */
+	display: flex;
+	list-style-type: none;
+	margin:12px 0px;
+	padding: 6px;
+}
+/* 一级超链接样式 */
+.daily_price_tit li a{
+	color: #959595;
+	text-align: center;
+	font-size: 13px;
+	padding: 6px 0px 0px 28px;
+}
+
+/* 二级菜单默认隐藏 */
+.daily_price_tit ul li .day_price_con{
+    display: none;
+}
+.daily_price_tit li a:hover .day_price_con1{
+    display:none;
+}
+
+/* 鼠标移到一级菜单上 */
+.daily_price_tit a:hover{
+    text-decoration: underline;
+    color: #de0000;  
+}
+
+/* 二级菜单的样式 */
+.daily_price_tit li:hover .day_price_con{
+    padding-top: 20px;
+    width: 450px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 160px;
+    display: flex;
+}
+/* 左侧“精选”二级菜单栏 */
+.daily_price_tit .day_price_con1{
+    padding-top: 20px;
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    left: 160px;
+    display: flex;
+}
+
+/* 每日特价 */
+#daily_price{
+    /* position: absolute;
+    top:880px; */
+
+	display: flex;
+	margin-top: 25px;
+}
+/* 每日特价文本样式 */
+.daily_price_text{
+	display: flex;
+    height: 35px;
+	font-size: 24px;
+	font-weight: bolder;
+	color: #404040;
+	padding: 12px 20px;
+}
+
+/* 向右小图标样式 */
+/* .daily_price_right{
+	width: 10px;
+	height: 10px;
+    position: absolute;
+    display: inline-block;
+    background-image: url(../img/right.png);
+    background-position: 3px 3px;
+} */
+.r-icon{
+	width: 16.5px;
+	height: 17px;
+	margin: 9px 66px 2px 10px;
+    display: inline-block;
+    background-image: url(../img/right1.png);
+    background-size: 33px 33px;
+    background-position: 49.5px 33px;
+}
+
+.r-icon:hover{
+    background-position: 0px 0px;
+ }   
+
+#daily_price .fore1{
+	display: flex;
+	background-color: #ffffff;
+	width: 505px;
+	height: 300px;
+}
+/* 一年最低价 */
+.year-lowprice{
+    padding: 4px;
+    width: 90px;
+    height: 15px;
+    color:white;
+    font-size: 11px;
+    font-weight: bolder;
+    background-color: rgb(241, 177, 58);
+    background-image: linear-gradient(to bottom right,rgb(255, 230, 8),rgb(255, 136, 0));
+    
+}
+.list-left img{
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    opacity: 1.0;
+}
+.list-left img:hover{
+    opacity: 0.8;
+}
+.list-left{
+    width: 150px;
+    height: 230px;
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(246, 252, 255);
+}
+.list-left p{
+    color: rgba(226, 4, 4, 0.932);
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+.list-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+    height: 230px;
+    font-size: 11px;
+    /* background-color: wheat;   */
+    padding-top: 15px;
+}
+.day_price_con_item{
+    display: flex;
+}
+.day_price_con_item_a:hover{
+    text-decoration : none;
+    font-size: red;
+}
+.day_price_con_item img{
+    width: 75px;
+    height: 75px;
+}
+.day_price_con_item img:hover{
+    opacity: 0.8;
+}
+.day_price_con_item_p{
+    padding-left: 4px;
+    width: 70px;
+    height: 100px;
+    background-color:white;
+    flex-wrap: wrap;
+}
+.day_price_con_item_p p{
+    color: rgba(226, 4, 4, 0.932);
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+/* 品牌闪购 */
+#daily_price .fore2 {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    width: 475px;
+    height: 300px;
+}
+.brand-list2{
+    width: 245px;
+    margin-top: 20px;
+}
+.brand-list2 a{
+    display: inline-block;
+    width: 115px;
+    height: 65px;
+    padding: 14px 0;
+}
+.brand-item_img{
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+}
+.brand-item_img img{
+    width: 100%;
+    height: 100%;
+}
+.brand-item_name{   
+    color: #666;
+    margin-top: 6px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+  .brand-one {
+    text-align: center;
+    margin-left: 10px;
+    padding: 10px 0px 15px 0px;
+    background-color: rgb(249, 255, 255);
+  }
+  .brand-one:hover,.brand-list2 a:hover{
+      opacity: 0.8;
+  }
+
+  .brand-one p{
+    font-size: 13px;
+    padding: 10px 0px;
+  }
+  .brand00 {
+    margin-left: 10px;
+    width: 150px;
+    height:150px;
+  }
+  
+
+  /* 发现好货 */
+  .find-list{
+    margin-left: 11px;
+	width: 762px;
+	height: 250px;
+	background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+#find-list-ul{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#find-list-ul li{
+    font-size: 13px;
+    /* float: left; */
+    width: 150px;
+    height: 125px;
+    margin: 40px 15px 0px 25px;
+}
+#find-list-ul li p img{
+    width: 100%;
+    height: 100%;
+}
+
+
+ /* JOY寻宝的菜单栏切换 */
+  /* 一级ul样式 */
+.JOY-con ul{
+	/* background-color: #B7B7B7; */
+	display: flex;
+	list-style-type: none;
+}
+
+/* 一级超链接样式 */
+.JOY-con li a{
+    border-radius: 30px 30px;
+	color: #a7a7a7;
+	text-align: center;
+	font-size: 8px;
+    background: #eeebeb;
+    /* 上右下左 */
+    margin: 0px 0px 0px 10px; 
+	padding:3px 8px;
+}
+
+/* 二级菜单默认隐藏 */
+.JOY-con ul li .JOY-con-list{
+    display: none;
+}
+.JOY-con ul li a:hover .JOY-con-list1{
+    display:none;
+}
+
+/* 鼠标移到一级菜单上 */
+.JOY-con a:hover{
+    text-decoration: none;
+    color:white; 
+    background: #de0000;
+
+}
+
+/* 二级菜单的样式 */
+.JOY-con li:hover .JOY-con-list{
+    padding-top: 15px;
+    width: 220px;
+	height: 200px;
+    display: block;
+    background: white;
+    position: absolute;
+    z-index: 20;
+    left: 393px;
+}
+/* 左侧二级菜单栏 */
+.JOY-con .JOY-con-list1{
+    padding-top: 15px;
+    width: 220px;
+	height: 300px;
+    position: absolute;
+    left: 393px;
+}
+.JOY-con-list-item{
+    display: flex;
+    height: 70px;
+}
+.JOY-con-list-item img{
+    width: 60px;
+    height: 60px;
+}
+.JOY-con-list-item img:hover{
+    opacity: 0.7;
+}
+
+.joy_item_name{
+    width: 150px;
+    height: 30px;
+    font-size: 6px;
+    margin-left: 10px;
+    white-space: wrap;
+	overflow: hidden; 
+	text-overflow:clip;
+}
+.joy_item_price{
+    margin-top: 8px;
+    margin-left: 10px;
+    color: #de0000;
+}
+.joy_item_price span{
+    font-size: 6px;
+}

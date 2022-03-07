@@ -1,0 +1,5027 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link type="text/css" rel="stylesheet" href="css/navmenu.css" />
+	<link type="text/css" rel="stylesheet" href="css/text.css" />
+	<link type="text/css" rel="stylesheet" href="css/dayprice.css" />
+	<!-- <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script> -->
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/script01.js"></script>
+	<title>demo</title>
+</head>
+
+<body>
+	<!-- 头部固定导航栏 -->
+	<div class="fixedSearch">
+		<div style="display: flex;">
+			<img src="img/jd4.png" class="fixed-img" />
+			<div class="line-block search">
+				<input type="text" value="京东家电" class="search_input">
+				<img src="img/camera.png" alt="">
+				<button class="search_btn">🔎</button></input>
+			</div>
+			<a href="#">
+				<button class="shopcar_btn">
+					<img src="img/shopcar.png" class="shopcar_img">
+					<span style="color:#d3020c;font-size: 13px;">我的购物车</span>
+				</button>
+			</a>
+		</div>
+	</div>
+
+	<!-- 头部广告 -->
+	<div id="head-ad" class="pl head-ad">
+		<div>
+			<img class="head-ad-img" src="img/headAD.png">
+			<img class="head-ad-close" onclick="btnClose()" src="img/close.png">
+		</div>
+	</div>
+
+	<!-- 头部导航栏 -->
+	<header>
+		<div class="line-block" id="headnav">
+			<!-- 城市定位 -->
+			<ul>
+				<li>
+					<!-- 一级 -->
+					<div id="adr1" class="head-dt">
+						<img src="img/dingwei2.png" alt="地理位置" onclick="getLocation()">
+						<a href="#">江苏</a>
+					</div>
+					<!-- 二级 -->
+					<div class="head-dd">
+						<div class="head-address">
+							<!-- 所有地址 -->
+							<div class="addr-con">
+								<div class="item"><a href="#">北京</a></div>
+								<div class="item"><a href="#">上海</a></div>
+								<div class="item"><a href="#">天津</a></div>
+								<div class="item"><a href="#">重庆</a></div>
+								<div class="item"><a href="#">山西</a></div>
+								<div class="item"><a href="#">河北</a></div>
+								<div class="item"><a href="#">河南</a></div>
+								<div class="item"><a href="#">辽宁</a></div>
+								<div class="item"><a href="#">吉林</a></div>
+								<div class="item"><a href="#">黑龙江</a></div>
+								<div class="item"><a href="#">内蒙古</a></div>
+								<div class="item-JS"><a style="color: white;" href="#">江苏</a></div>
+								<div class="item"><a href="#">山东</a></div>
+								<div class="item"><a href="#">安徽</a></div>
+								<div class="item"><a href="#">浙江</a></div>
+								<div class="item"><a href="#">福建</a></div>
+								<div class="item"><a href="#">湖北</a></div>
+								<div class="item"><a href="#">湖南</a></div>
+								<div class="item"><a href="#">广东</a></div>
+								<div class="item"><a href="#">广西</a></div>
+								<div class="item"><a href="#">江西</a></div>
+								<div class="item"><a href="#">四川</a></div>
+								<div class="item"><a href="#">海南</a></div>
+								<div class="item"><a href="#">贵州</a></div>
+								<div class="item"><a href="#">云南</a></div>
+								<div class="item"><a href="#">西藏</a></div>
+								<div class="item"><a href="#">陕西</a></div>
+								<div class="item"><a href="#">甘肃</a></div>
+								<div class="item"><a href="#">青海</a></div>
+								<div class="item"><a href="#">宁夏</a></div>
+								<div class="item"><a href="#">新疆</a></div>
+								<div class="item"><a href="#">港澳</a></div>
+								<div class="item"><a href="#">台湾</a></div>
+								<div class="item"><a href="#">钓鱼岛</a></div>
+								<div class="item"><a href="#">海外</a></div>
+							</div>
+							<div class="addr-con2">
+								<div class="con2-dt">地区专向版本</div>
+								<div class="con2-dd"><a href="">中國港澳</a></div>
+								<div class="con2-dd"><a href="">中國台灣</a></div>
+								<div class="con2-dd"><a href="">京东全球</a></div>
+							</div>
+							<div class="addr-con2 addr-con3">
+								<div class="con2-dt">Available Sites</div>
+								<div class="con2-dd">
+									<img src="img/d1.png" alt="">
+									<a href="">Global Site</a>
+								</div>
+								<div class="con2-dd">
+									<img src="img/d2.png" alt="">
+									<a href="">Сайт России</a>
+								</div>
+								<div class="con2-dd">
+									<img src="img/d3.png" alt="">
+									<a href="">Situs Indonesia</a>
+								</div>
+								<div class="con2-dd">
+									<img src="img/d4.png" alt="">
+									<a href="">Sitio de España</a>
+								</div>
+								<div class="con2-dd">
+									<img src="img/d5.png" alt="">
+									<a href="">เว็บไซต์ประเทศไทย</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- 导航 -->
+			<ul class="fr">
+				<li>
+					<div class="dt dt-login"><a href="#">你好，请先登录 <span class="overf"> 免登录</span></a></div>
+				</li>
+				<li class="spacer">|</li>
+				<li>
+					<div class="dt"><a href="#">我的订单</a></div>
+				</li>
+				<li class="spacer">|</li>
+				<li>
+					<div class="head-dt"><a href="#" class="span1">我的京东 ∨</a></div>
+					<div class="head-dd">
+						<div class="myjd">
+							<div class="list1">
+								<div class="item"><a href="#">待处理订单</a></div>
+								<div class="item"><a href="#">返修退换货</a></div>
+								<div class="item"><a href="#">降价商品</a></div>
+							</div>
+							<div class="list2">
+								<div class="item"><a href="#">我的问答</a></div>
+								<div class="item"><a href="#">我的关注</a></div>
+							</div>
+						</div>
+						<div class="myjd2">
+							<div class="list1">
+								<div class="item"><a href="#">我的京豆</a></div>
+								<div class="item"><a href="#">我的白条</a></div>
+							</div>
+							<div class="list2">
+								<div class="item"><a href="#">我的理财</a></div>
+								<div class="item"><a href="#">我的优惠券</a></div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li class="spacer">|</li>
+				<li>
+					<div class="dt"><a href="#">京东会员</a></div>
+				</li>
+				<li class="spacer">|</li>
+				<!-- 企业采购 -->
+				<li>
+					<div class="head-dt"><a href="" style="color: rgb(223, 6, 6);">企业采购 ∨</a></div>
+					<div class="head-dd">
+						<div class="procurement">
+							<div class="item"><a href="#">企业购</a></div>
+							<div class="item"><a href="#">商用场景馆</a></div>
+							<div class="item"><a href="#">工业品</a></div>
+							<div class="item"><a href="#">丰客多商城</a></div>
+							<div class="item"><a href="#">礼品卡</a></div>
+							<div class="item"><a href="#">微信企业购</a></div>
+							<div class="item"><a href="#">工品优选</a></div>
+							<div class="item"><a href="#">京东锦礼</a></div>
+							<div class="item-bottom"><a href="">大中型企业采购</a></div>
+						</div>
+					</div>
+				</li>
+				<li class="spacer">|</li>
+				<!-- 客户服务 -->
+				<li>
+					<div class="head-dt"><a href="#">客户服务 ∨</a></div>
+					<div class="head-dd">
+						<div class="cus-service">
+							<div class="item-dt">客户</div>
+							<div class="item"><a href="#">帮助中心</a></div>
+							<div class="item"><a href="#">售后服务</a></div>
+							<div class="item"><a href="#">在线客服</a></div>
+							<div class="item"><a href="#">意见建议</a></div>
+							<div class="item"><a href="#">电话客服</a></div>
+							<div class="item"><a href="#">客服邮箱</a></div>
+							<div class="item"><a href="#">金融咨询</a></div>
+							<div class="item"><a href="#">全球售客服</a></div>
+							<div class="item"><a href="#">企业客服</a></div>
+						</div>
+						<div class="shop-service">
+							<div class="item-dt">商户</div>
+							<div class="item"><a href="#">合作招商</a></div>
+							<div class="item"><a href="#">成长中心</a></div>
+							<div class="item"><a href="#">商家后台</a></div>
+							<div class="item"><a href="#">京麦工作台</a></div>
+							<div class="item"><a href="#">商家帮助</a></div>
+							<div class="item"><a href="#">规则平台</a></div>
+						</div>
+					</div>
+				</li>
+				<li class="spacer">|</li>
+				<!-- 网站导航 -->
+				<li>
+					<div class="head-dt"><a href="#">网站导航 ∨</a></div>
+
+					<div class="head-dd" style="position: absolute;left: -750px;">
+						<div class="web-nav">
+							<div class="theme">
+								<div class="item-dt">特色主题</div>
+								<div class="item"><a href="#">新品首发</a></div>
+								<div class="item"><a href="#">京东金融</a></div>
+								<div class="item"><a href="#">全球售</a></div>
+								<div class="item"><a href="#">国际站</a></div>
+								<div class="item"><a href="#">京东会员</a></div>
+								<div class="item"><a href="#">台湾售</a></div>
+								<div class="item"><a href="#">俄语站</a></div>
+								<div class="item"><a href="#">装机大师</a></div>
+								<div class="item"><a href="#">港澳售</a></div>
+								<div class="item"><a href="#">优惠券</a></div>
+								<div class="item"><a href="#">秒杀</a></div>
+								<div class="item"><a href="#">闪购</a></div>
+								<div class="item"><a href="#">印尼站</a></div>
+								<div class="item"><a href="#">陪伴计划</a></div>
+								<div class="item"><a href="#">出海招商</a></div>
+								<div class="item"><a href="#">拍拍二手</a></div>
+								<div class="item"><a href="#">买什么</a></div>
+							</div>
+
+							<div class="industry-channels">
+								<div class="item-dt">行业频道</div>
+								<div class="item"><a href="#">手机</a></div>
+								<div class="item"><a href="#">电脑办公</a></div>
+								<div class="item"><a href="#">智能数码</a></div>
+								<div class="item"><a href="#">家用电器</a></div>
+								<div class="item"><a href="#">京东小家</a></div>
+								<div class="item"><a href="#">京东服饰</a></div>
+								<div class="item"><a href="#">京东生鲜</a></div>
+								<div class="item"><a href="#">家装城</a></div>
+								<div class="item"><a href="#">母婴</a></div>
+								<div class="item"><a href="#">食品</a></div>
+								<div class="item"><a href="#">农资频道</a></div>
+								<div class="item"><a href="#">整车</a></div>
+								<div class="item"><a href="#">图书</a></div>
+								<div class="item"><a href="#">劳动防护</a></div>
+							</div>
+							<div class="life-service">
+								<div class="item-dt">生活服务</div>
+								<div class="item"><a href="#">京东众筹</a></div>
+								<div class="item"><a href="#">白条</a></div>
+								<div class="item"><a href="#">京东金融APP</a></div>
+								<div class="item"><a href="#">京东小金库</a></div>
+								<div class="item"><a href="#">理财</a></div>
+								<div class="item"><a href="#">话费</a></div>
+								<div class="item"><a href="#">水电煤</a></div>
+								<div class="item"><a href="#">彩票</a></div>
+								<div class="item"><a href="#">旅行</a></div>
+								<div class="item"><a href="#">机票酒店</a></div>
+								<div class="item"><a href="#">电影票</a></div>
+								<div class="item"><a href="#">京东到家</a></div>
+								<div class="item"><a href="#">游戏</a></div>
+							</div>
+							<div class="more-info">
+								<div class="item-dt">更多精选</div>
+								<div class="item"><a href="#">合作招商</a></div>
+								<div class="item"><a href="#">京东通信</a></div>
+								<div class="item"><a href="#">京东E卡</a></div>
+								<div class="item"><a href="#">企业采购</a></div>
+								<div class="item"><a href="#">服务市场</a></div>
+								<div class="item"><a href="#">办公生活馆</a></div>
+								<div class="item"><a href="#">校园加盟</a></div>
+								<div class="item"><a href="#">京东社区</a></div>
+								<div class="item"><a href="#">游戏社区</a></div>
+								<div class="item"><a href="#">知识产权维权</a></div>
+								<div class="item"><a href="#">关于我们</a></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="spacer">|</li>
+				<!-- 手机京东 -->
+				<li>
+					<div class="dt"><a href="#">手机京东 </a></div>
+					<div class="head-dd mobileJD">
+						<div class="mobileJD_list">
+							<img src="img/2Dcode01.png">
+							<div class="mobileJD_text">
+								<p>手机京东</p>
+								<span>新人专享大礼包</span>
+								<div><img src="img/iPhone.png"><img src="img/Android.png"><img src="img/iPad.jpg"></div>
+							</div>
+						</div>
+						<div class="mobileJD_list">
+							<img src="img/2Dcode02.png">
+							<div class="mobileJD_text">
+								<p>关注京东<br>JD.COM</p>
+								<span>抢5元红包</span>
+							</div>
+						</div>
+						<div class="mobileJD_list">
+							<img src="img/2Dcode03.jpg">
+							<div class="mobileJD_text">
+								<p>京东金融客户端</p>
+								<span>新人专享大礼包</span>
+								<p><img src="img/iPhone.png"><img src="img/Android.png"></p>
+							</div>
+						</div>
+						<div class="mobileJD_list">
+							<img src="img/2Dcode04.png">
+							<div class="mobileJD_text">
+								<p>京东健康客户端</p>
+								<p><img src="img/iPhone.png"><img src="img/Android.png"></p>
+							</div>
+						</div>
+
+					</div>
+				</li>
+				<li class="spacer">|</li>
+				<li>
+					<div class="dt"><a href="#">网站无障碍</a></div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- 搜索框 -->
+	<form id="search" class="body-margin">
+		<div class="line-block logo" id="logo">
+			<a href="#">
+				<div><img src="img/jd3.png" id="img1" /></div>
+				<div class="logo_con" style="display: none;">
+					<span class="logo_text">省力养娃神器</span>
+					<span class="logo_btn"> 去看看> </span>
+				</div>
+			</a>
+
+		</div>
+		<div class="line-block div_search">
+			<div style="display: flex;">
+				<div class="line-block search">
+					<input type="text" value="京东家电" class="search_input">
+					<img src="img/camera.png" alt="">
+					<button class="search_btn">🔎</button></input>
+				</div>
+				<a href="#">
+					<button class="shopcar_btn">
+						<img src="img/shopcar.png" class="shopcar_img">
+						<span style="color:#d3020c;font-size: 13px;">我的购物车</span>
+					</button>
+				</a>
+			</div>
+			<div>
+				<a href="#">数码五折起</a>&nbsp;
+				<a href="#">美的加湿</a>&nbsp;
+				<a href="#">实木床</a>&nbsp;
+				<a href="#">感恩礼遇</a>&nbsp;
+				<a href="#">三星盛典</a>&nbsp;
+				<a href="#">小米</a>&nbsp;
+				<a href="#">好物预售</a>
+			</div>
+		</div>
+		<!-- 二维码 -->
+		<div id="two-D-code" class="two-D-code"><img src="img/2Dcode01.png"></div>
+		<!-- 商品向导 -->
+		<div class="shopnav">
+			<a href="#" style="color:#e00013;font-weight: 900;">秒杀</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" style="color:#e00013;font-weight: 900;">优惠券</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">PLUS会员</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">品牌闪购</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">拍卖</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">京东家电</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">京东超市</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">京东生鲜</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">京东国际</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">京东云</a>
+		</div>
+	</form>
+
+	<!-- 主要内容区 -->
+	<form>
+		<!-- 左侧导航栏 -->
+		<div id="nav" class="body-margin">
+			<ul>
+				<li>
+					<a class="nav" href="">家用电器</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">家电馆 &gt; </a>
+							<a href="#">家电专卖店 &gt; </a>
+							<a href="#">家电服务 &gt; </a>
+							<a href="#">企业采购 &gt; </a>
+							<a href="#">商用电器 &gt; </a>
+							<a class="cate_channel" href="#">高价回收 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">电视 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">全面屏电视</a>
+									<a class="cate_detail_con" href="#">教育电视</a>
+									<a class="cate_detail_con" href="#">OLED电视</a>
+									<a class="cate_detail_con" href="#">智慧屏</a>
+									<a class="cate_detail_con" href="#">4K超清电视</a>
+									<a class="cate_detail_con" href="#">55英寸</a>
+									<a class="cate_detail_con" href="#">电视配件</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">空调 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">新风空调</a>
+									<a class="cate_detail_con" href="#">以旧换新</a>
+									<a class="cate_detail_con" href="#">空调挂机</a>
+									<a class="cate_detail_con" href="#">空调套装</a>
+									<a class="cate_detail_con" href="#">中央空调</a>
+									<a class="cate_detail_con" href="#">新一级能效</a>
+									<a class="cate_detail_con" href="#">变频空调</a>
+									<a class="cate_detail_con" href="#">移动空调</a>
+									<a class="cate_detail_con" href="#">挂机1.5匹</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">洗衣机 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">滚筒洗衣机</a>
+									<a class="cate_detail_con" href="#">洗烘一体机</a>
+									<a class="cate_detail_con" href="#">波轮洗衣机</a>
+									<a class="cate_detail_con" href="#">迷你洗衣机</a>
+									<a class="cate_detail_con" href="#">烘干机</a>
+									<a class="cate_detail_con" href="#">洗衣机配件</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">冰箱 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">多门</a>
+									<a class="cate_detail_con" href="#">对开门</a>
+									<a class="cate_detail_con" href="#">三门</a>
+									<a class="cate_detail_con" href="#">双门</a>
+									<a class="cate_detail_con" href="#">冷柜/冰吧</a>
+									<a class="cate_detail_con" href="#">酒柜</a>
+									<a class="cate_detail_con" href="#">冰箱配件</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">厨卫大电 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">油烟机</a>
+									<a class="cate_detail_con" href="#">燃气灶</a>
+									<a class="cate_detail_con" href="#">烟灶套装</a>
+									<a class="cate_detail_con" href="#">集成灶</a>
+									<a class="cate_detail_con" href="#">消毒柜</a>
+									<a class="cate_detail_con" href="#">洗碗机</a>
+									<a class="cate_detail_con" href="#">电热水器</a>
+									<a class="cate_detail_con" href="#">燃气热水器</a>
+									<a class="cate_detail_con" href="#">空气能热水器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">厨卫小电 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">破壁机</a>
+									<a class="cate_detail_con" href="#">咖啡机</a>
+									<a class="cate_detail_con" href="#">榨汁机</a>
+									<a class="cate_detail_con" href="#">电炖锅</a>
+									<a class="cate_detail_con" href="#">果蔬净化清洗机</a>
+									<a class="cate_detail_con" href="#">三明治机/早餐机</a>
+									<a class="cate_detail_con" href="#">电烤箱</a>
+									<a class="cate_detail_con" href="#">厨师机/和面机</a>
+									<a class="cate_detail_con" href="#">料理机</a>
+									<a class="cate_detail_con" href="#">电饼档</a>
+									<a class="cate_detail_con" href="#">电水壶/热水瓶</a>
+									<a class="cate_detail_con" href="#">面包机</a>
+									<a class="cate_detail_con" href="#">电火锅</a>
+									<a class="cate_detail_con" href="#">空气炸锅</a>
+									<a class="cate_detail_con" href="#">养生壶</a>
+									<a class="cate_detail_con" href="#">电磁炉</a>
+									<a class="cate_detail_con" href="#">电饭煲</a>
+									<a class="cate_detail_con" href="#">电压力锅</a>
+									<a class="cate_detail_con" href="#">微波炉</a>
+									<a class="cate_detail_con" href="#">面条机</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt" style="width: 145px;"><a class="cate_detail_dt_a"
+										href="#">生活电器 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">取暖器</a>
+									<a class="cate_detail_con" href="#">加湿器</a>
+									<a class="cate_detail_con" href="#">空气净化器</a>
+									<a class="cate_detail_con" href="#">净水器</a>
+									<a class="cate_detail_con" href="#">饮水机</a>
+									<a class="cate_detail_con" href="#">茶吧机</a>
+									<a class="cate_detail_con" href="#">吸尘器</a>
+									<a class="cate_detail_con" href="#">扫地机器人</a>
+									<a class="cate_detail_con" href="#">洗地机</a>
+									<a class="cate_detail_con" href="#">蒸汽/电动拖把</a>
+									<a class="cate_detail_con" href="#">除螨仪</a>
+									<a class="cate_detail_con" href="#">挂烫机/熨斗</a>
+									<a class="cate_detail_con" href="#">擦地/擦窗机器人</a>
+									<a class="cate_detail_con" href="#">干衣机</a>
+									<a class="cate_detail_con" href="#">除湿机</a>
+									<a class="cate_detail_con" href="#">电话机</a>
+									<a class="cate_detail_con" href="#">电风扇</a>
+									<a class="cate_detail_con" href="#">冷风扇</a>
+									<a class="cate_detail_con" href="#">毛球修剪器</a>
+									<a class="cate_detail_con" href="#">生活电器配件</a>
+
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">个护健康 &gt;</a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">油烟机</a>
+									<a class="cate_detail_con" href="#">燃气灶</a>
+									<a class="cate_detail_con" href="#">烟灶套装</a>
+									<a class="cate_detail_con" href="#">集成灶</a>
+									<a class="cate_detail_con" href="#">消毒柜</a>
+									<a class="cate_detail_con" href="#">洗碗机</a>
+									<a class="cate_detail_con" href="#">电热水器</a>
+									<a class="cate_detail_con" href="#">燃气热水器</a>
+									<a class="cate_detail_con" href="#">空气能热水器</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">手机/运营商/数码</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">手机频道 &gt; </a>
+							<a href="#">网上营业厅 &gt; </a>
+							<a href="#">配件频道 &gt; </a>
+							<a href="#">智能数码 &gt; </a>
+							<a href="#">影像Club &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">手机通讯 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">手机</a>
+									<a class="cate_detail_con" href="#">游戏手机</a>
+									<a class="cate_detail_con" href="#">5G手机</a>
+									<a class="cate_detail_con" href="#">拍照手机</a>
+									<a class="cate_detail_con" href="#">全面屏手机</a>
+									<a class="cate_detail_con" href="#">对讲机</a>
+									<a class="cate_detail_con" href="#">以旧换新</a>
+									<a class="cate_detail_con" href="#">手机维修</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">运营商 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">合约机</a>
+									<a class="cate_detail_con" href="#">手机卡</a>
+									<a class="cate_detail_con" href="#">宽带</a>
+									<a class="cate_detail_con" href="#">充话费/流量</a>
+									<a class="cate_detail_con" href="#">中国电信</a>
+									<a class="cate_detail_con" href="#">中国移动</a>
+									<a class="cate_detail_con" href="#">中国联通</a>
+									<a class="cate_detail_con" href="#">京东通信</a>
+									<a class="cate_detail_con" href="#">挑靓号</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">手机配件 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">手机壳</a>
+									<a class="cate_detail_con" href="#">贴膜</a>
+									<a class="cate_detail_con" href="#">手机存储卡</a>
+									<a class="cate_detail_con" href="#">数据线</a>
+									<a class="cate_detail_con" href="#">充电器</a>
+									<a class="cate_detail_con" href="#">手机耳机</a>
+									<a class="cate_detail_con" href="#">创意配件</a>
+									<a class="cate_detail_con" href="#">手机饰品</a>
+									<a class="cate_detail_con" href="#">手机电池</a>
+									<a class="cate_detail_con" href="#">苹果周边</a>
+									<a class="cate_detail_con" href="#">移动电源</a>
+									<a class="cate_detail_con" href="#">蓝牙耳机</a>
+									<a class="cate_detail_con" href="#">手机支架</a>
+									<a class="cate_detail_con" href="#">拍照配件</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">摄影摄像 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">数码相机</a>
+									<a class="cate_detail_con" href="#">微单相机</a>
+									<a class="cate_detail_con" href="#">单反相机</a>
+									<a class="cate_detail_con" href="#">拍立得</a>
+									<a class="cate_detail_con" href="#">运动相机</a>
+									<a class="cate_detail_con" href="#">摄像机</a>
+									<a class="cate_detail_con" href="#">镜头</a>
+									<a class="cate_detail_con" href="#">户外器材</a>
+									<a class="cate_detail_con" href="#">影棚器材</a>
+									<a class="cate_detail_con" href="#">冲印服务</a>
+									<a class="cate_detail_con" href="#">数码相框</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">数码配件 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">存储卡</a>
+									<a class="cate_detail_con" href="#">三脚架/云台</a>
+									<a class="cate_detail_con" href="#">相机包</a>
+									<a class="cate_detail_con" href="#">滤镜</a>
+									<a class="cate_detail_con" href="#">闪光灯/手柄</a>
+									<a class="cate_detail_con" href="#">相机清洁/贴膜</a>
+									<a class="cate_detail_con" href="#">机身附件</a>
+									<a class="cate_detail_con" href="#">镜头附件</a>
+									<a class="cate_detail_con" href="#">读卡器</a>
+									<a class="cate_detail_con" href="#">支架</a>
+									<a class="cate_detail_con" href="#">电池/充电器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">影音娱乐 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">耳机/耳麦</a>
+									<a class="cate_detail_con" href="#">音箱/音响</a>
+									<a class="cate_detail_con" href="#">智能音箱</a>
+									<a class="cate_detail_con" href="#">收音机</a>
+									<a class="cate_detail_con" href="#">麦克风</a>
+									<a class="cate_detail_con" href="#">MP3/MP4</a>
+									<a class="cate_detail_con" href="#">专业音频</a>
+									<a class="cate_detail_con" href="#">音频线</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">智能设备 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">智能手表</a>
+									<a class="cate_detail_con" href="#">智能手环</a>
+									<a class="cate_detail_con" href="#">监控摄像</a>
+									<a class="cate_detail_con" href="#">智能出行</a>
+									<a class="cate_detail_con" href="#">智能眼镜</a>
+									<a class="cate_detail_con" href="#">智能家居</a>
+									<a class="cate_detail_con" href="#">健康监测</a>
+									<a class="cate_detail_con" href="#">无人机</a>
+									<a class="cate_detail_con" href="#">智能机器人</a>
+									<a class="cate_detail_con" href="#">智能配饰</a>
+									<a class="cate_detail_con" href="#">运动跟踪器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">电子教育 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">学生平板</a>
+									<a class="cate_detail_con" href="#">点读机/笔</a>
+									<a class="cate_detail_con" href="#">早教益智</a>
+									<a class="cate_detail_con" href="#">录音笔</a>
+									<a class="cate_detail_con" href="#">电纸书</a>
+									<a class="cate_detail_con" href="#">电子词典</a>
+									<a class="cate_detail_con" href="#">复读机</a>
+									<a class="cate_detail_con" href="#">翻译机</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">办公/电脑</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">电脑办公 &gt; </a>
+							<a href="#">企业采购 &gt; </a>
+							<a href="#">GAME+ &gt; </a>
+							<a href="#">装机大师 &gt; </a>
+							<a href="#">企业租凭 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">电脑整机 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">笔记本</a>
+									<a class="cate_detail_con" href="#">游戏本</a>
+									<a class="cate_detail_con" href="#">平台电脑</a>
+									<a class="cate_detail_con" href="#">台式机</a>
+									<a class="cate_detail_con" href="#">一体机</a>
+									<a class="cate_detail_con" href="#">服务器/工作站</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">电脑配件 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">显示器</a>
+									<a class="cate_detail_con" href="#">CPU</a>
+									<a class="cate_detail_con" href="#">主板</a>
+									<a class="cate_detail_con" href="#">显卡</a>
+									<a class="cate_detail_con" href="#">硬盘</a>
+									<a class="cate_detail_con" href="#">内存</a>
+									<a class="cate_detail_con" href="#">机箱</a>
+									<a class="cate_detail_con" href="#">电源</a>
+									<a class="cate_detail_con" href="#">散热器</a>
+									<a class="cate_detail_con" href="#">显示器支架</a>
+									<a class="cate_detail_con" href="#">刻录机/光驱</a>
+									<a class="cate_detail_con" href="#">声卡/扩展卡</a>
+									<a class="cate_detail_con" href="#">装机配件</a>
+									<a class="cate_detail_con" href="#">SSD固态硬盘</a>
+									<a class="cate_detail_con" href="#">组装电脑</a>
+									<a class="cate_detail_con" href="#">USB分线器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">外设产品 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">鼠标</a>
+									<a class="cate_detail_con" href="#">键盘</a>
+									<a class="cate_detail_con" href="#">键鼠套装</a>
+									<a class="cate_detail_con" href="#">网络仪表仪器</a>
+									<a class="cate_detail_con" href="#">U盘</a>
+									<a class="cate_detail_con" href="#">移动固态硬盘</a>
+									<a class="cate_detail_con" href="#">移动硬盘</a>
+									<a class="cate_detail_con" href="#">鼠标垫</a>
+									<a class="cate_detail_con" href="#">摄像头</a>
+									<a class="cate_detail_con" href="#">线缆</a>
+									<a class="cate_detail_con" href="#">手写板</a>
+									<a class="cate_detail_con" href="#">硬盘盒</a>
+									<a class="cate_detail_con" href="#">电脑工具</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">游戏设备 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">游戏机</a>
+									<a class="cate_detail_con" href="#">游戏耳机</a>
+									<a class="cate_detail_con" href="#">手柄/方向盘</a>
+									<a class="cate_detail_con" href="#">游戏软件</a>
+									<a class="cate_detail_con" href="#">游戏周边</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">网络产品 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">路由器</a>
+									<a class="cate_detail_con" href="#">网络机顶盒</a>
+									<a class="cate_detail_con" href="#">交换机</a>
+									<a class="cate_detail_con" href="#">网络存储</a>
+									<a class="cate_detail_con" href="#">网卡</a>
+									<a class="cate_detail_con" href="#">5G/4G上网</a>
+									<a class="cate_detail_con" href="#">网线</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">办公设备 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">投影机</a>
+									<a class="cate_detail_con" href="#">投影设备</a>
+									<a class="cate_detail_con" href="#">打印机</a>
+									<a class="cate_detail_con" href="#">传真设备</a>
+									<a class="cate_detail_con" href="#">验钞/点钞机</a>
+									<a class="cate_detail_con" href="#">扫描设备</a>
+									<a class="cate_detail_con" href="#">复合机</a>
+									<a class="cate_detail_con" href="#">碎纸机</a>
+									<a class="cate_detail_con" href="#">考勤门禁</a>
+									<a class="cate_detail_con" href="#">收银机</a>
+									<a class="cate_detail_con" href="#">会议音频视频</a>
+									<a class="cate_detail_con" href="#">保险柜</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">文具 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">笔类</a>
+									<a class="cate_detail_con" href="#">本册/便签</a>
+									<a class="cate_detail_con" href="#">办公文具</a>
+									<a class="cate_detail_con" href="#">文件收纳</a>
+									<a class="cate_detail_con" href="#">学生文具</a>
+									<a class="cate_detail_con" href="#">计算器</a>
+									<a class="cate_detail_con" href="#">画具画材</a>
+									<a class="cate_detail_con" href="#">财会用品</a>
+									<a class="cate_detail_con" href="#">文房四宝</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">耗材 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">硒鼓/墨粉</a>
+									<a class="cate_detail_con" href="#">墨盒</a>
+									<a class="cate_detail_con" href="#">色带</a>
+									<a class="cate_detail_con" href="#">纸类</a>
+									<a class="cate_detail_con" href="#">刻录光盘</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">家居/家具/家装/厨具</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">家装城 &gt; </a>
+							<a href="#">居家日用 &gt; </a>
+							<a href="#">精品家具 &gt; </a>
+							<a href="#">家装建材 &gt; </a>
+							<a href="#">国际厨具 &gt; </a>
+							<a href="#">装修服务 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">厨具 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">水具酒具</a>
+									<a class="cate_detail_con" href="#">烹饪锅具</a>
+									<a class="cate_detail_con" href="#">炒锅</a>
+									<a class="cate_detail_con" href="#">碗碟套装</a>
+									<a class="cate_detail_con" href="#">厨房配件</a>
+									<a class="cate_detail_con" href="#">刀剪菜板</a>
+									<a class="cate_detail_con" href="#">锅具套装</a>
+									<a class="cate_detail_con" href="#">茶具</a>
+									<a class="cate_detail_con" href="#">咖啡具</a>
+									<a class="cate_detail_con" href="#">保温杯</a>
+									<a class="cate_detail_con" href="#">厨房置物架</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家纺 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">四件套</a>
+									<a class="cate_detail_con" href="#">枕芯</a>
+									<a class="cate_detail_con" href="#">毛巾浴巾</a>
+									<a class="cate_detail_con" href="#">地毯地垫</a>
+									<a class="cate_detail_con" href="#">床垫/床褥</a>
+									<a class="cate_detail_con" href="#">毯子</a>
+									<a class="cate_detail_con" href="#">抱枕靠垫</a>
+									<a class="cate_detail_con" href="#">窗帘/窗纱</a>
+									<a class="cate_detail_con" href="#">床单/床笠</a>
+									<a class="cate_detail_con" href="#">被套</a>
+									<a class="cate_detail_con" href="#">枕巾枕套</a>
+									<a class="cate_detail_con" href="#">沙发垫套</a>
+									<a class="cate_detail_con" href="#">坐垫</a>
+									<a class="cate_detail_con" href="#">桌布/罩件</a>
+									<a class="cate_detail_con" href="#">蚕丝被</a>
+									<a class="cate_detail_con" href="#">乳胶枕</a>
+									<a class="cate_detail_con" href="#">蚊帐</a>
+									<a class="cate_detail_con" href="#">凉席</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">生活日用 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">收纳用品</a>
+									<a class="cate_detail_con" href="#">雨伞雨具</a>
+									<a class="cate_detail_con" href="#">净化除味</a>
+									<a class="cate_detail_con" href="#">浴室用品</a>
+									<a class="cate_detail_con" href="#">洗晒/熨烫</a>
+									<a class="cate_detail_con" href="#">缝纫/针织用品</a>
+									<a class="cate_detail_con" href="#">保暖防护</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家装软饰 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">装饰字画</a>
+									<a class="cate_detail_con" href="#">装饰摆件</a>
+									<a class="cate_detail_con" href="#">手工/十字绣</a>
+									<a class="cate_detail_con" href="#">相框/照片墙</a>
+									<a class="cate_detail_con" href="#">墙贴/装饰贴</a>
+									<a class="cate_detail_con" href="#">花瓶花艺</a>
+									<a class="cate_detail_con" href="#">香薰蜡烛</a>
+									<a class="cate_detail_con" href="#">节庆饰品</a>
+									<a class="cate_detail_con" href="#">钟饰</a>
+									<a class="cate_detail_con" href="#">帘艺隔断</a>
+									<a class="cate_detail_con" href="#">创意家居</a>
+									<a class="cate_detail_con" href="#">3D立体墙贴</a>
+									<a class="cate_detail_con" href="#">玻璃贴纸</a>
+									<a class="cate_detail_con" href="#">电视背景墙</a>
+									<a class="cate_detail_con" href="#">电表箱装饰画</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">灯具 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">吸顶灯</a>
+									<a class="cate_detail_con" href="#">吊灯</a>
+									<a class="cate_detail_con" href="#">台灯</a>
+									<a class="cate_detail_con" href="#">筒灯射灯</a>
+									<a class="cate_detail_con" href="#">庭院灯</a>
+									<a class="cate_detail_con" href="#">装饰灯</a>
+									<a class="cate_detail_con" href="#">LED灯</a>
+									<a class="cate_detail_con" href="#">氛围照明</a>
+									<a class="cate_detail_con" href="#">落地灯</a>
+									<a class="cate_detail_con" href="#">应急灯/手电</a>
+									<a class="cate_detail_con" href="#">节能灯</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家具 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">客厅</a>
+									<a class="cate_detail_con" href="#">卧室</a>
+									<a class="cate_detail_con" href="#">餐厅</a>
+									<a class="cate_detail_con" href="#">书房</a>
+									<a class="cate_detail_con" href="#">儿童</a>
+									<a class="cate_detail_con" href="#">储物</a>
+									<a class="cate_detail_con" href="#">办公家具</a>
+									<a class="cate_detail_con" href="#">阳台户外</a>
+									<a class="cate_detail_con" href="#">电脑桌</a>
+									<a class="cate_detail_con" href="#">电视柜</a>
+									<a class="cate_detail_con" href="#">茶几</a>
+									<a class="cate_detail_con" href="#">办公柜</a>
+									<a class="cate_detail_con" href="#">进口/原创</a>
+									<a class="cate_detail_con" href="#">沙发</a>
+									<a class="cate_detail_con" href="#">床</a>
+									<a class="cate_detail_con" href="#">床垫</a>
+									<a class="cate_detail_con" href="#">餐桌</a>
+									<a class="cate_detail_con" href="#">衣柜</a>
+									<a class="cate_detail_con" href="#">书架</a>
+									<a class="cate_detail_con" href="#">鞋柜</a>
+									<a class="cate_detail_con" href="#">置物架/a>
+										<a class="cate_detail_con" href="#">电脑椅</a>
+										<a class="cate_detail_con" href="#">晾衣架</a>
+										<a class="cate_detail_con" href="#">儿童床</a>
+										<a class="cate_detail_con" href="#">儿童桌椅</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">全屋定制 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">定制衣柜</a>
+									<a class="cate_detail_con" href="#">榻榻米</a>
+									<a class="cate_detail_con" href="#">橱柜</a>
+									<a class="cate_detail_con" href="#">门</a>
+									<a class="cate_detail_con" href="#">室内门</a>
+									<a class="cate_detail_con" href="#">防盗门</a>
+									<a class="cate_detail_con" href="#">窗</a>
+									<a class="cate_detail_con" href="#">淋浴房</a>
+									<a class="cate_detail_con" href="#">壁挂炉</a>
+									<a class="cate_detail_con" href="#">散热器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">建筑材料 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">油漆涂料</a>
+									<a class="cate_detail_con" href="#">涂刷辅料</a>
+									<a class="cate_detail_con" href="#">瓷砖</a>
+									<a class="cate_detail_con" href="#">地板</a>
+									<a class="cate_detail_con" href="#">壁纸</a>
+									<a class="cate_detail_con" href="#">强化地板</a>
+									<a class="cate_detail_con" href="#">美缝剂</a>
+									<a class="cate_detail_con" href="#">防水涂料</a>
+									<a class="cate_detail_con" href="#">木材/板材</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">厨房卫浴 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">水槽</a>
+									<a class="cate_detail_con" href="#">龙头</a>
+									<a class="cate_detail_con" href="#">淋浴花洒</a>
+									<a class="cate_detail_con" href="#">马桶</a>
+									<a class="cate_detail_con" href="#">智能马桶</a>
+									<a class="cate_detail_con" href="#">智能马桶盖</a>
+									<a class="cate_detail_con" href="#">厨卫挂件</a>
+									<a class="cate_detail_con" href="#">浴室柜</a>
+									<a class="cate_detail_con" href="#">浴霸</a>
+									<a class="cate_detail_con" href="#">集成吊顶</a>
+									<a class="cate_detail_con" href="#">垃圾处理器</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">五金电工 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">指纹锁</a>
+									<a class="cate_detail_con" href="#">电动工具</a>
+									<a class="cate_detail_con" href="#">手动工具</a>
+									<a class="cate_detail_con" href="#">测量工具</a>
+									<a class="cate_detail_con" href="#">工具箱</a>
+									<a class="cate_detail_con" href="#">开关插座</a>
+									<a class="cate_detail_con" href="#">配电箱/断路器</a>
+									<a class="cate_detail_con" href="#">机械锁</a>
+									<a class="cate_detail_con" href="#">拉手</a>
+								</dd>
+							</dl>
+
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">装修设计 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">全包装修</a>
+									<a class="cate_detail_con" href="#">半包装修</a>
+									<a class="cate_detail_con" href="#">家装设计</a>
+									<a class="cate_detail_con" href="#">高端设计</a>
+									<a class="cate_detail_con" href="#">局部装修</a>
+									<a class="cate_detail_con" href="#">安装服务</a>
+									<a class="cate_detail_con" href="#">装修公司</a>
+									<a class="cate_detail_con" href="#">旧房翻新</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">男装/女装/童装/内衣</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">男装 &gt; </a>
+							<a href="#">女装 &gt; </a>
+							<a href="#">内衣 &gt; </a>
+							<a href="#">童装童鞋 &gt; </a>
+							<a href="#">服饰企业购 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">女装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">当季热卖</a><a class="cate_detail_con"
+										href="#">新品推荐</a>
+									<a class="cate_detail_con" href="#">商场同款</a><a class="cate_detail_con"
+										href="#">时尚套装</a>
+									<a class="cate_detail_con" href="#">连衣裙</a><a class="cate_detail_con"
+										href="#">半身裙</a>
+									<a class="cate_detail_con" href="#">T恤/衬衫</a><a class="cate_detail_con"
+										href="#">休闲裤</a>
+									<a class="cate_detail_con" href="#">牛仔裤</a><a class="cate_detail_con"
+										href="#">短外套</a>
+									<a class="cate_detail_con" href="#">卫衣</a><a class="cate_detail_con"
+										href="#">小西装</a>
+									<a class="cate_detail_con" href="#">风衣</a><a class="cate_detail_con"
+										href="#">针织衫</a>
+									<a class="cate_detail_con" href="#">棉服</a><a class="cate_detail_con"
+										href="#">雪纺衫</a>
+									<a class="cate_detail_con" href="#">大码女装</a><a class="cate_detail_con"
+										href="#">中老年女装</a>
+									<a class="cate_detail_con" href="#">短裤</a><a class="cate_detail_con"
+										href="#">正装裤</a>
+									<a class="cate_detail_con" href="#">马甲</a><a class="cate_detail_con"
+										href="#">吊带背心</a>
+									<a class="cate_detail_con" href="#">打底衫</a><a class="cate_detail_con"
+										href="#">旗袍/汉服</a>
+									<a class="cate_detail_con" href="#">礼服/婚纱</a><a class="cate_detail_con"
+										href="#">毛衣</a>
+									<a class="cate_detail_con" href="#">羊绒衫</a><a class="cate_detail_con"
+										href="#">羽绒服</a>
+									<a class="cate_detail_con" href="#">毛呢大衣</a><a class="cate_detail_con"
+										href="#">皮草</a>
+									<a class="cate_detail_con" href="#">打底裤</a><a class="cate_detail_con"
+										href="#">加绒裤</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">男装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">新品推荐</a><a class="cate_detail_con"
+										href="#">T恤/衬衫</a>
+									<a class="cate_detail_con" href="#">休闲裤</a><a class="cate_detail_con"
+										href="#">牛仔裤</a>
+									<a class="cate_detail_con" href="#">短裤</a><a class="cate_detail_con"
+										href="#">PPLO衫</a>
+									<a class="cate_detail_con" href="#">羽绒服</a><a class="cate_detail_con"
+										href="#">棉服</a>
+									<a class="cate_detail_con" href="#">真皮皮衣</a><a class="cate_detail_con"
+										href="#">夹克</a>
+									<a class="cate_detail_con" href="#">卫衣</a><a class="cate_detail_con"
+										href="#">毛呢大衣</a>
+									<a class="cate_detail_con" href="#">大码男装</a><a class="cate_detail_con"
+										href="#">西服套装</a>
+									<a class="cate_detail_con" href="#">仿皮皮衣</a><a class="cate_detail_con"
+										href="#">风衣</a>
+									<a class="cate_detail_con" href="#">针织衫</a><a class="cate_detail_con"
+										href="#">马甲/背心</a>
+									<a class="cate_detail_con" href="#">羊毛衫</a><a class="cate_detail_con"
+										href="#">羊绒衫</a>
+									<a class="cate_detail_con" href="#">西服</a><a class="cate_detail_con" href="#">西裤</a>
+									<a class="cate_detail_con" href="#">卫裤/运动裤</a><a class="cate_detail_con"
+										href="#">工装</a>
+									<a class="cate_detail_con" href="#">设计师/潮牌</a><a class="cate_detail_con"
+										href="#">唐装/中山装</a>
+									<a class="cate_detail_con" href="#">中老年男装</a><a class="cate_detail_con"
+										href="#">加绒裤</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">内衣 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">文胸</a>
+									<a class="cate_detail_con" href="#">睡衣/家居服</a>
+									<a class="cate_detail_con" href="#">男士内裤</a>
+									<a class="cate_detail_con" href="#">女士内裤</a>
+									<a class="cate_detail_con" href="#">吊带/背心</a>
+									<a class="cate_detail_con" href="#">情侣睡衣</a>
+									<a class="cate_detail_con" href="#">塑身美体</a>
+									<a class="cate_detail_con" href="#">休闲棉裤</a>
+									<a class="cate_detail_con" href="#">商务男袜</a>
+									<a class="cate_detail_con" href="#">连裤袜/丝袜</a>
+									<a class="cate_detail_con" href="#">抹胸</a>
+									<a class="cate_detail_con" href="#">内衣配件</a>
+									<a class="cate_detail_con" href="#">大码内衣</a>
+									<a class="cate_detail_con" href="#">打底衫</a>
+									<a class="cate_detail_con" href="#">泳衣</a>
+									<a class="cate_detail_con" href="#">秋衣秋裤</a>
+									<a class="cate_detail_con" href="#">打底裤袜</a>
+									<a class="cate_detail_con" href="#">保暖内衣</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">配饰 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">女士围巾/披肩</a>
+									<a class="cate_detail_con" href="#">光学镜架/镜片</a>
+									<a class="cate_detail_con" href="#">毛线帽</a>
+									<a class="cate_detail_con" href="#">真皮手套</a>
+									<a class="cate_detail_con" href="#">毛线手套</a>
+									<a class="cate_detail_con" href="#">男士丝巾/围巾</a>
+									<a class="cate_detail_con" href="#">棒球帽</a>
+									<a class="cate_detail_con" href="#">太阳镜</a>
+									<a class="cate_detail_con" href="#">防辐射眼镜</a>
+									<a class="cate_detail_con" href="#">老花镜</a>
+									<a class="cate_detail_con" href="#">贝雷帽</a>
+									<a class="cate_detail_con" href="#">礼帽</a>
+									<a class="cate_detail_con" href="#">围巾/手套/帽子套装</a>
+									<a class="cate_detail_con" href="#">领带/领结/领带夹</a>
+									<a class="cate_detail_con" href="#">鸭舌帽</a>
+									<a class="cate_detail_con" href="#">口罩</a>
+									<a class="cate_detail_con" href="#">耳罩/耳包</a>
+									<a class="cate_detail_con" href="#">毛线/布面料</a>
+									<a class="cate_detail_con" href="#">遮阳帽</a>
+									<a class="cate_detail_con" href="#">遮阳伞/雨伞</a>
+									<a class="cate_detail_con" href="#">袖口</a>
+									<a class="cate_detail_con" href="#">钥匙扣</a>
+									<a class="cate_detail_con" href="#">游泳镜</a>
+									<a class="cate_detail_con" href="#">男士腰带/礼盒</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">童装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">套装</a>
+									<a class="cate_detail_con" href="#">卫衣</a>
+									<a class="cate_detail_con" href="#">裤子</a>
+									<a class="cate_detail_con" href="#">外套/大衣</a>
+									<a class="cate_detail_con" href="#">毛衣/针织衫</a>
+									<a class="cate_detail_con" href="#">衬衫</a>
+									<a class="cate_detail_con" href="#">户外/运动服</a>
+									<a class="cate_detail_con" href="#">T恤</a>
+									<a class="cate_detail_con" href="#">裙子</a>
+									<a class="cate_detail_con" href="#">亲子装</a>
+									<a class="cate_detail_con" href="#">礼服/演出服</a>
+									<a class="cate_detail_con" href="#">羽绒服</a>
+									<a class="cate_detail_con" href="#">棉服</a>
+									<a class="cate_detail_con" href="#">内衣裤</a>
+									<a class="cate_detail_con" href="#">配饰</a>
+									<a class="cate_detail_con" href="#">家居服</a>
+									<a class="cate_detail_con" href="#">马甲</a>
+									<a class="cate_detail_con" href="#">袜子</a>
+									<a class="cate_detail_con" href="#">民族服装</a>
+									<a class="cate_detail_con" href="#">婴儿礼盒</a>
+									<a class="cate_detail_con" href="#">连体衣/爬服</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">童鞋 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">运动鞋</a>
+									<a class="cate_detail_con" href="#">靴子</a>
+									<a class="cate_detail_con" href="#">帆布鞋</a>
+									<a class="cate_detail_con" href="#">皮鞋</a>
+									<a class="cate_detail_con" href="#">棉鞋</a>
+									<a class="cate_detail_con" href="#">凉鞋</a>
+									<a class="cate_detail_con" href="#">拖鞋</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<a class="nav" href="">美妆/个护清洁/宠物</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">清洁用品 &gt; </a>
+							<a href="#">美妆馆 &gt; </a>
+							<a href="#">个护馆 &gt; </a>
+							<a href="#">妆比社 &gt; </a>
+							<a href="#">京东国际美妆 &gt; </a>
+							<a href="#">宠物馆 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">面部护肤 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">礼盒</a>
+									<a class="cate_detail_con" href="#">美白</a>
+									<a class="cate_detail_con" href="#">防晒</a>
+									<a class="cate_detail_con" href="#">面膜</a>
+									<a class="cate_detail_con" href="#">洁面</a>
+									<a class="cate_detail_con" href="#">爽肤水</a>
+									<a class="cate_detail_con" href="#">精华</a>
+									<a class="cate_detail_con" href="#">眼霜</a>
+									<a class="cate_detail_con" href="#">乳液/面霜</a>
+									<a class="cate_detail_con" href="#">卸妆</a>
+									<a class="cate_detail_con" href="#">T区护理</a>
+									<a class="cate_detail_con" href="#">润唇膏</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">香水彩妆 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">隔离</a>
+									<a class="cate_detail_con" href="#">遮瑕</a>
+									<a class="cate_detail_con" href="#">气垫BB</a>
+									<a class="cate_detail_con" href="#">粉底</a>
+									<a class="cate_detail_con" href="#">腮红</a>
+									<a class="cate_detail_con" href="#">口红/唇膏</a>
+									<a class="cate_detail_con" href="#">唇釉/唇彩</a>
+									<a class="cate_detail_con" href="#">睫毛膏</a>
+									<a class="cate_detail_con" href="#">眼影</a>
+									<a class="cate_detail_con" href="#">眼线</a>
+									<a class="cate_detail_con" href="#">眉笔/眉粉</a>
+									<a class="cate_detail_con" href="#">散粉</a>
+									<a class="cate_detail_con" href="#">美甲</a>
+									<a class="cate_detail_con" href="#">女士香水</a>
+									<a class="cate_detail_con" href="#">男士香水</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">洗发护发 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">洗发水</a>
+									<a class="cate_detail_con" href="#">护发素</a>
+									<a class="cate_detail_con" href="#">发膜/精油</a>
+									<a class="cate_detail_con" href="#">造型</a>
+									<a class="cate_detail_con" href="#">染发/烫发</a>
+									<a class="cate_detail_con" href="#">假发</a>
+									<a class="cate_detail_con" href="#">美发工具</a>
+									<a class="cate_detail_con" href="#">洗护套装</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">口腔护理 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">牙膏</a>
+									<a class="cate_detail_con" href="#">牙粉</a>
+									<a class="cate_detail_con" href="#">牙贴</a>
+									<a class="cate_detail_con" href="#">牙刷</a>
+									<a class="cate_detail_con" href="#">牙线</a>
+									<a class="cate_detail_con" href="#">漱口水</a>
+									<a class="cate_detail_con" href="#">口喷</a>
+									<a class="cate_detail_con" href="#">假牙清洁</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">身体护理 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">花露水</a>
+									<a class="cate_detail_con" href="#">沐浴露</a>
+									<a class="cate_detail_con" href="#">香皂</a>
+									<a class="cate_detail_con" href="#">洗手液</a>
+									<a class="cate_detail_con" href="#">护手霜</a>
+									<a class="cate_detail_con" href="#">浴盐</a>
+									<a class="cate_detail_con" href="#">润肤</a>
+									<a class="cate_detail_con" href="#">精油</a>
+									<a class="cate_detail_con" href="#">手膜/足膜</a>
+									<a class="cate_detail_con" href="#">走珠/止汗露</a>
+									<a class="cate_detail_con" href="#">男士洗液</a>
+									<a class="cate_detail_con" href="#">脱毛刀/膏</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">纸品清洗 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">抽纸</a>
+									<a class="cate_detail_con" href="#">卷纸</a>
+									<a class="cate_detail_con" href="#">湿巾</a>
+									<a class="cate_detail_con" href="#">湿厕纸</a>
+									<a class="cate_detail_con" href="#">洗衣凝珠</a>
+									<a class="cate_detail_con" href="#">洗衣液</a>
+									<a class="cate_detail_con" href="#">洗衣粉</a>
+									<a class="cate_detail_con" href="#">肥皂</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家庭清洁 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">洗洁精</a>
+									<a class="cate_detail_con" href="#">油污净</a>
+									<a class="cate_detail_con" href="#">洁厕灵</a>
+									<a class="cate_detail_con" href="#">消毒液</a>
+									<a class="cate_detail_con" href="#">地板清洁剂</a>
+									<a class="cate_detail_con" href="#">垃圾袋</a>
+									<a class="cate_detail_con" href="#">垃圾桶</a>
+									<a class="cate_detail_con" href="#">拖把/扫把</a>
+									<a class="cate_detail_con" href="#">驱蚊驱虫</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">宠物生活 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">狗粮</a>
+									<a class="cate_detail_con" href="#">狗罐头</a>
+									<a class="cate_detail_con" href="#">狗零食</a>
+									<a class="cate_detail_con" href="#">狗厕所</a>
+									<a class="cate_detail_con" href="#">尿垫</a>
+									<a class="cate_detail_con" href="#">猫粮</a>
+									<a class="cate_detail_con" href="#">猫砂</a>
+									<a class="cate_detail_con" href="#">猫砂盆</a>
+									<a class="cate_detail_con" href="#">猫狗窝</a>
+									<a class="cate_detail_con" href="#">食具水具</a>
+									<a class="cate_detail_con" href="#">医疗保健</a>
+									<a class="cate_detail_con" href="#">宠物玩具</a>
+									<a class="cate_detail_con" href="#">宠物牵引</a>
+									<a class="cate_detail_con" href="#">猫水族世界</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="nav">女鞋/箱包/钟表/珠宝</a>
+					<div class="nav_l2">
+						<a href="#"></a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="nav">男鞋/运动/户外</a>
+					<div class="nav_l2">
+						<a href="#"></a>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="#">母婴/玩具乐器</a>
+					<div class="nav_l2">
+						<a href="#"></a>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="#">艺术/礼品鲜花/农资绿植</a>
+					<div class="nav_l2"></div>
+				</li>
+				<li>
+					<a class="nav" href="#">医药保健/计生情趣</a>
+					<div class="nav_l2"></div>
+				</li>
+				<li>
+					<a class="nav" href="#">图书/文娱/教育/电子书</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">图书 &gt; </a>
+							<a href="#">文娱 &gt; </a>
+							<a href="#">教育培训 &gt; </a>
+							<a href="#">电子书 &gt; </a>
+							<a href="#">文娱寄卖商城 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">文学 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">小说</a>
+									<a class="cate_detail_con" href="#">散文随笔</a>
+									<a class="cate_detail_con" href="#">青春文学</a>
+									<a class="cate_detail_con" href="#">传记</a>
+									<a class="cate_detail_con" href="#">动漫</a>
+									<a class="cate_detail_con" href="#">悬疑推理</a>
+									<a class="cate_detail_con" href="#">科幻</a>
+									<a class="cate_detail_con" href="#">武侠</a>
+									<a class="cate_detail_con" href="#">世界名著</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">童书 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">0-2岁</a>
+									<a class="cate_detail_con" href="#">3-6岁</a>
+									<a class="cate_detail_con" href="#">7-10岁</a>
+									<a class="cate_detail_con" href="#">11-14岁</a>
+									<a class="cate_detail_con" href="#">儿童文学</a>
+									<a class="cate_detail_con" href="#">绘本</a>
+									<a class="cate_detail_con" href="#">科普百科</a>
+									<a class="cate_detail_con" href="#">幼儿启蒙</a>
+									<a class="cate_detail_con" href="#">智力开发</a>
+									<a class="cate_detail_con" href="#">少儿英语</a>
+									<a class="cate_detail_con" href="#">玩具书</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">教材教辅 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">教材</a>
+									<a class="cate_detail_con" href="#">中小学教辅</a>
+									<a class="cate_detail_con" href="#">考试</a>
+									<a class="cate_detail_con" href="#">外语学习</a>
+									<a class="cate_detail_con" href="#">字典词典</a>
+									<a class="cate_detail_con" href="#">课外读物</a>
+									<a class="cate_detail_con" href="#">英语四六级</a>
+									<a class="cate_detail_con" href="#">会计类考试</a>
+									<a class="cate_detail_con" href="#">国家公务员</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">人文社科 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">历史</a>
+									<a class="cate_detail_con" href="#">心理学</a>
+									<a class="cate_detail_con" href="#">政治军事</a>
+									<a class="cate_detail_con" href="#">传统文化</a>
+									<a class="cate_detail_con" href="#">哲学宗教</a>
+									<a class="cate_detail_con" href="#">社会科学</a>
+									<a class="cate_detail_con" href="#">法律</a>
+									<a class="cate_detail_con" href="#">文化</a>
+									<a class="cate_detail_con" href="#">党政专区</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">经管励志 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">管理</a>
+									<a class="cate_detail_con" href="#">金融</a>
+									<a class="cate_detail_con" href="#">经济</a>
+									<a class="cate_detail_con" href="#">市场营销</a>
+									<a class="cate_detail_con" href="#">领导力</a>
+									<a class="cate_detail_con" href="#">股票</a>
+									<a class="cate_detail_con" href="#">投资</a>
+									<a class="cate_detail_con" href="#">励志与成功</a>
+									<a class="cate_detail_con" href="#">自我完善</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">艺术 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">绘画</a>
+									<a class="cate_detail_con" href="#">摄影</a>
+									<a class="cate_detail_con" href="#">音乐</a>
+									<a class="cate_detail_con" href="#">书法</a>
+									<a class="cate_detail_con" href="#">连环画</a>
+									<a class="cate_detail_con" href="#">设计</a>
+									<a class="cate_detail_con" href="#">建筑艺术</a>
+									<a class="cate_detail_con" href="#">艺术史</a>
+									<a class="cate_detail_con" href="#">影视</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">科学技术 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">计算机与互联网</a>
+									<a class="cate_detail_con" href="#">科普</a>
+									<a class="cate_detail_con" href="#">建筑</a>
+									<a class="cate_detail_con" href="#">工业技术</a>
+									<a class="cate_detail_con" href="#">电子通信</a>
+									<a class="cate_detail_con" href="#">医学</a>
+									<a class="cate_detail_con" href="#">科学与自然</a>
+									<a class="cate_detail_con" href="#">农林</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">生活 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">育儿家教</a>
+									<a class="cate_detail_con" href="#">孕产胎教</a>
+									<a class="cate_detail_con" href="#">健身保健</a>
+									<a class="cate_detail_con" href="#">旅游地图</a>
+									<a class="cate_detail_con" href="#">手工DIY</a>
+									<a class="cate_detail_con" href="#">烹饪美食</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">刊/原版 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">杂志/期刊</a>
+									<a class="cate_detail_con" href="#">英文原版书</a>
+									<a class="cate_detail_con" href="#">港台图书</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">文娱音像 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">音乐</a>
+									<a class="cate_detail_con" href="#">影视</a>
+									<a class="cate_detail_con" href="#">教育音像</a>
+									<a class="cate_detail_con" href="#">游戏</a>
+									<a class="cate_detail_con" href="#">影视/动漫周边</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">教育培训 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">青少年培训</a>
+									<a class="cate_detail_con" href="#">语言培训</a>
+									<a class="cate_detail_con" href="#">大学生培训</a>
+									<a class="cate_detail_con" href="#">考试考证培训</a>
+									<a class="cate_detail_con" href="#">职业技能培训</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">电子书 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">小说</a>
+									<a class="cate_detail_con" href="#">文学</a>
+									<a class="cate_detail_con" href="#">励志与成功</a>
+									<a class="cate_detail_con" href="#">经济管理</a>
+									<a class="cate_detail_con" href="#">传记</a>
+									<a class="cate_detail_con" href="#">社会科学</a>
+									<a class="cate_detail_con" href="#">计算机与互联网</a>
+									<a class="cate_detail_con" href="#">进口原版</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">邮币 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">邮票</a>
+									<a class="cate_detail_con" href="#">钱币</a>
+									<a class="cate_detail_con" href="#">邮资封片</a>
+									<a class="cate_detail_con" href="#">磁卡</a>
+									<a class="cate_detail_con" href="#">票证</a>
+									<a class="cate_detail_con" href="#">礼品册</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">机票/酒店/旅游/生活</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">本周热推 &gt; </a>
+							<a href="#">精选酒店 &gt; </a>
+							<a href="#">特惠机票 &gt; </a>
+							<a href="#">主题乐园 &gt; </a>
+							<a href="#">电影票 &gt; </a>
+							<a href="#">会议团建 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">交通出行 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">国内机票</a>
+									<a class="cate_detail_con" href="#">国际机票</a>
+									<a class="cate_detail_con" href="#">火车票</a>
+									<a class="cate_detail_con" href="#">机场服务</a>
+									<a class="cate_detail_con" href="#">机票套餐</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">酒店预订 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">国内酒店</a>
+									<a class="cate_detail_con" href="#">国际酒店</a>
+									<a class="cate_detail_con" href="#">酒店套餐</a>
+									<a class="cate_detail_con" href="#">超值精选</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">旅游度假 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">国内旅游</a>
+									<a class="cate_detail_con" href="#">出境旅游</a>
+									<a class="cate_detail_con" href="#">全球签证</a>
+									<a class="cate_detail_con" href="#">景点门票</a>
+									<a class="cate_detail_con" href="#">邮轮</a>
+									<a class="cate_detail_con" href="#">旅游保险</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">定制旅游 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">团队建设</a>
+									<a class="cate_detail_con" href="#">奖励旅游</a>
+									<a class="cate_detail_con" href="#">会议周边</a>
+									<a class="cate_detail_con" href="#">会议展览</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">演出票务 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">电影选座</a>
+									<a class="cate_detail_con" href="#">演唱会</a>
+									<a class="cate_detail_con" href="#">音乐会</a>
+									<a class="cate_detail_con" href="#">话剧歌剧</a>
+									<a class="cate_detail_con" href="#">体育赛事</a>
+									<a class="cate_detail_con" href="#">舞蹈芭蕾</a>
+									<a class="cate_detail_con" href="#">戏曲综艺</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">生活缴费 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">水费</a>
+									<a class="cate_detail_con" href="#">电费</a>
+									<a class="cate_detail_con" href="#">燃气费</a>
+									<a class="cate_detail_con" href="#">城市通</a>
+									<a class="cate_detail_con" href="#">油卡充值</a>
+									<a class="cate_detail_con" href="#">加油卡</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">生活服务 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">家政保洁</a>
+									<a class="cate_detail_con" href="#">摄影写真</a>
+									<a class="cate_detail_con" href="#">丽人/养生</a>
+									<a class="cate_detail_con" href="#">代办代理</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">彩票 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">数据图表</a>
+									<a class="cate_detail_con" href="#">彩民服务</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">游戏 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">QQ充值</a>
+									<a class="cate_detail_con" href="#">游戏点卡</a>
+									<a class="cate_detail_con" href="#">游戏周边</a>
+									<a class="cate_detail_con" href="#">手机游戏</a>
+									<a class="cate_detail_con" href="#">单机游戏</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="">安装/维修/清洗/二手</a>
+					<div class="nav_l2">
+						<div class="category_channels">
+							<a href="#">京东服务+ &gt; </a>
+							<a href="#">京东小家 &gt; </a>
+							<a href="#">安装服务 &gt; </a>
+							<a href="#">维修服务 &gt; </a>
+							<a href="#">清洗保养 &gt; </a>
+							<a href="#">企悦服务 &gt; </a>
+						</div>
+						<div class="cate_detail">
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家电安装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">空调安装</a>
+									<a class="cate_detail_con" href="#">电视安装</a>
+									<a class="cate_detail_con" href="#">洗衣机安装</a>
+									<a class="cate_detail_con" href="#">热水器安装</a>
+									<a class="cate_detail_con" href="#">烟机/灶具安装</a>
+									<a class="cate_detail_con" href="#">净水器安装</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">办公安装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">电脑安装</a>
+									<a class="cate_detail_con" href="#">办公设备安装</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家居安装 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">家具安装</a>
+									<a class="cate_detail_con" href="#">灯具安装</a>
+									<a class="cate_detail_con" href="#">智能家居安装</a>
+									<a class="cate_detail_con" href="#">五金卫浴安装</a>
+									<a class="cate_detail_con" href="#">晾衣架安装</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">家电维修 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">空调维修</a>
+									<a class="cate_detail_con" href="#">电视维修</a>
+									<a class="cate_detail_con" href="#">洗衣机维修</a>
+									<a class="cate_detail_con" href="#">冰箱维修</a>
+									<a class="cate_detail_con" href="#">热水器维修</a>
+									<a class="cate_detail_con" href="#">油烟机维修</a>
+									<a class="cate_detail_con" href="#">燃气灶维修</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">手机维修 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">屏幕换新</a>
+									<a class="cate_detail_con" href="#">电池换新</a>
+									<a class="cate_detail_con" href="#">手机故障</a>
+									<a class="cate_detail_con" href="#">保障服务</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">数码维修 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">智能家居维修</a>
+									<a class="cate_detail_con" href="#">无人机维修</a>
+									<a class="cate_detail_con" href="#">智能设备维修</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">清洗保养 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">家电清洗</a>
+									<a class="cate_detail_con" href="#">家居家纺洗护</a>
+									<a class="cate_detail_con" href="#">服装洗护</a>
+									<a class="cate_detail_con" href="#">鞋靴箱包保养</a>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="cate_detail_dt"><a class="cate_detail_dt_a" href="#">二手数码/电脑 &gt; </a></dt>
+								<dd>
+									<a class="cate_detail_con" href="#">苹果手机</a>
+									<a class="cate_detail_con" href="#">安卓手机</a>
+									<a class="cate_detail_con" href="#">充电器</a>
+									<a class="cate_detail_con" href="#">手机壳</a>
+									<a class="cate_detail_con" href="#">耳机/耳麦</a>
+									<a class="cate_detail_con" href="#">单反相机</a>
+									<a class="cate_detail_con" href="#">微单相机</a>
+									<a class="cate_detail_con" href="#">智能手表</a>
+									<a class="cate_detail_con" href="#">笔记本</a>
+									<a class="cate_detail_con" href="#">游戏机</a>
+									<a class="cate_detail_con" href="#">官翻电脑</a>
+									<a class="cate_detail_con" href="#">平板电脑</a>
+									<a class="cate_detail_con" href="#">台式机</a>
+									<a class="cate_detail_con" href="#">一体机</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a class="nav" href="#">房产/汽车/汽车用品</a>
+					<div class="nav_l2"></div>
+				</li>
+				<li>
+					<a class="nav" href="#">工业品</a>
+					<div class="nav_l2"></div>
+				</li>
+
+			</ul>
+		</div>
+		<!-- 中央大图片 -->
+		<div class="line-block center_bigimg">
+			<div id="bigImg-prev" class="slider_btn slider_prev" onclick="btnPrev()">
+				<i>&lt;</i>
+			</div>
+			<img src="img/big01.jpg" id="image">
+			<div id="bigImg-next" class="slider_btn slider_next" onclick="btnNext()">
+				<i>&gt;</i>
+			</div>
+			<!-- <div class="navDiv">
+				<a class="navDiv-a" href="javascript:;"></a>
+				<a class="navDiv-a" href="javascript:;"></a>
+				<a class="navDiv-a" href="javascript:;"></a>
+				<a class="navDiv-a" href="javascript:;"></a>
+				<a class="navDiv-a" href="javascript:;"></a>
+				<a class="navDiv-a" href="javascript:;"></a>
+			</div> -->
+		</div>
+		<!-- 右侧信息栏 -->
+		<div id="rightnav" class="line-block">
+			<!-- 登陆注册 -->
+			<div class="login">
+				<a href="#">
+					<div class="line-block"><img src="img/jd2.jpg" alt="" id="img2"></div>
+				</a>
+				<div class="line-block" style="text-align: center;">
+					<a class=" item-login" href="#">Hi~欢迎逛京东！</a>
+					<div class="item-register"><a href="#">登录</a> | <a href="#">注册</a></div>
+				</div>
+				<button id="btn2">新人福利</button>
+				<button id="btn3">PLUS会员</button>
+			</div>
+			<!-- 京东快报 -->
+			<div class="jd-newspaper">
+				<div class="more_info">
+					<b>京东快报</b>
+					<a href="#">更多 > </a>
+				</div>
+				<div class="list1">
+					<p class="item">热门</p>
+					<p class="item">HOT</p>
+					<p class="item">推荐</p>
+					<p class="item">最新</p>
+				</div>
+				<div class="list2">
+					<div class="item"><a href="#">开智小梓酵母锌口服液</a></div>
+					<div class="item"><a href="#">福利！游戏党的电脑、机箱</a></div>
+					<div class="item"><a href="#">污物冲不尽、堵塞不通怎么办</a></div>
+					<div class="item"><a href="#">剪辑视频音频、修图绰绰有余</a></div>
+				</div>
+			</div>
+			<!-- 信息搜索，话费-机票-酒店 -->
+			<div class="info_search">
+				<ul class="info_search_ul">
+					<li class="info_service_item">
+						<a href="#">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service1.png">
+								<img class="service_icon_img_hover" src="img/service01.png">
+							</i>
+							<span class="info_txt">话费</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="#">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service2.png">
+								<img class="service_icon_img_hover" src="img/service02.png">
+							</i>
+							<span class="info_txt">机票</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="#">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service3.png">
+								<img class="service_icon_img_hover" src="img/service03.png">
+							</i>
+							<span class="info_txt">酒店</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service4.png">
+								<img class="service_icon_img_hover" src="img/service04.png">
+							</i>
+							<span class="info_txt">游戏</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service5.png">
+								<img class="service_icon_img_hover" src="img/service05.png">
+							</i>
+							<span class="info_txt">加油卡</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service6.png">
+								<img class="service_icon_img_hover" src="img/service06.png">
+							</i>
+							<span class="info_txt">火车票</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service7.png">
+								<img class="service_icon_img_hover" src="img/service07.png">
+							</i>
+							<span class="info_txt">众筹</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service8.png">
+								<img class="service_icon_img_hover" src="img/service08.png">
+							</i>
+							<span class="info_txt">理财</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service9.png">
+								<img class="service_icon_img_hover" src="img/service09.png">
+							</i>
+							<span class="info_txt">白条</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service10.png">
+								<img class="service_icon_img_hover" src="img/service010.png">
+
+							</i>
+							<span class="info_txt">电影票</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service11.png">
+								<img class="service_icon_img_hover" src="img/service011.png">
+							</i>
+							<span class="info_txt">企业购</span>
+						</a>
+					</li>
+					<li class="info_service_item">
+						<a href="">
+							<i class="service_ico">
+								<img class="service_icon_img" src="img/service12.png">
+								<img class="service_icon_img_hover" src="img/service012.png">
+							</i>
+							<span class="info_txt">礼品卡</span>
+						</a>
+					</li>
+				</ul>
+				<!-- 鼠标移动显示 -->
+				<!-- <div class="info_search_hover">
+					<ul class="info_hover_ul">
+						<li class="info_service_item">
+							<a href="#">
+								<span class="info_txt">话费</span>
+							</a>
+						</li>
+						<li class="info_service_item">
+							<a href="#">
+								<span class="info_txt">机票</span>
+							</a>
+						</li>
+						<li class="info_service_item">
+							<a href="#">
+								<span class="info_txt">酒店</span>
+							</a>
+						</li>
+					</ul>
+					<div class="info_hover_con">
+						<ul class="tab-ul">
+							<li class="tab-item"><a href="">话费充值</a></li>
+							<li class="tab-item"><a href="">流量充值</a></li>
+						</ul>
+						<div class="form-top">
+							<p>号码 <input type="text" value="移动/联通/电信"></p>
+							<p>面值
+								<select>
+									<option value="20">20元</option>
+									<option value="30">30元</option>
+									<option value="50">50元</option>
+									<option value="100" selected>100元</option>
+									<option value="200">200元</option>
+									<option value="300">300元</option>
+								</select>
+							</p>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</form>
+
+	<!-- 京东秒杀 -->
+	<div id="seckill" class="body-margin ">
+		<!-- 秒杀倒计时 -->
+		<a href="#" class="line-block seckill-time">
+			<div class="seckill-time-tit">京东秒杀</div>
+			<div class="seckill-time-img"></div>
+			<div class="seckill-time-txt">
+				<div class="seckill-clock"><strong>14:00</strong></div>点场 距结束
+			</div>
+			<div class="time">
+				<div class="seckill-timmer seckill-hh"></div>
+				<span>：</span>
+				<div class="seckill-timmer seckill-mm"></div>
+				<span>：</span>
+				<div class="seckill-timmer seckill-ss"></div>
+				<!-- <div class="lay"></div> -->
+			</div>
+		</a>
+		<!-- 秒杀列表 -->
+		<div class="seckill-page">
+			<!-- 秒杀轮播图 -->
+			<div class="slider">
+				<!-- 向左展示 -->
+				<div id="prev" class="slider_btn slider_prev" onclick="prevBtn()"> <i>&lt;</i> </div>
+				<div class="page-list">
+					<div class="page-list-all">
+						<!-- 列表1 -->
+						<div class="slider-list" id="slider-list1">
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill01.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">摩托罗拉 edge s pro 旗舰骁龙870 1亿像素 50X潜望式变焦
+										10亿色144Hz臻彩屏 轻薄5G手机 12GB+256GB 青玉案</p>
+									<p>￥2299.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill02.png"></div>
+								<div class="item-con">
+									<p class="item-name">金樽吟窖藏2012 茅台镇53度白酒
+										白酒礼盒装酱香型白酒 单瓶500ml*1 </p>
+									<p>￥458.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill03.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">vivo iQOO Neo5活力版 高通骁龙870 144Hz竞速屏
+										44W闪充 电竞游戏5G手机 8GB+128GB极夜黑 官方标配</p>
+									<p>￥1899.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+						</div>
+						<!-- 列表2 -->
+						<div class="slider-list" id="slider-list2">
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill04.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">Apple iMac 24英寸 4.5K屏 新款八核M1芯片(8核图形处理器)
+										8G 256G SSD 一体式电脑主机 粉色 MGPM3CH/A</p>
+									<p>￥11199.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill05.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">【酒厂直供】杜康 白酒 富贵吉祥纯粮优级酒52度浓香型高度酒
+										酒盒送礼婚礼喜宴酒 500ml*6瓶整箱(含3礼品袋) </p>
+									<p>￥188.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill06.png"></div>
+								<div class="item-con">
+									<p class="item-name">花点时间 INS经典圣诞树装饰 桌面仿真
+										72小时发货 经典桌面仿真圣诞树（高35cm)-72小时</p>
+									<p>￥59.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+						</div>
+						<!-- 列表3 -->
+						<div class="slider-list" id="slider-list3">
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill07.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">佳能（Canon）EOS RP 全画幅微单数码相机
+										24-105标准镜头套装 （约2620万像素/轻巧便携)</p>
+									<p>￥9799.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill08.png"></div>
+								<div class="item-con">
+									<p class="item-name">韩束圣诞节礼物 护肤品化妆品套装女补水保湿抗皱紧致
+										聚时光鎏金臻颜礼盒七件套（洁面水乳液面霜精华眼霜）</p>
+									<p>￥299.00</p>
+								</div>
+							</a>
+							<div class="split-line"></div>
+							<a href="#" class="slider-list-item">
+								<div class="item-img"><img src="img/seckill09.jpg"></div>
+								<div class="item-con">
+									<p class="item-name">周生生 圣诞礼物 黄金转运珠 足金Charme串珠字母
+										单颗 男女款不含手链绳 定价 字母L </p>
+									<p>￥500.00</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 向右展示 -->
+				<div id="next" class="slider_btn slider_next" onclick="nextBtn()"><i>&gt;</i></div>
+				<div class="split-line"></div>
+			</div>
+			<!-- 品牌秒杀轮播图 -->
+			<div class="brand-slider">
+				<a href="#" class="on" id="a0">
+					<div class="item-image">
+						<img src="img/brand_seckill01.jpg" alt="">
+					</div>
+					<div class="item-info">
+						<p class="item-info-title">周大福品牌秒杀</p>
+						<p class="item-info-promo">爆款满600减60</p>
+						<div class="item-info-btn"> 品牌秒杀 > </div>
+					</div>
+				</a>
+				<a href="#" id="a1">
+					<div class="item-image">
+						<img src="img/brand_seckill02.jpg" alt="">
+					</div>
+					<div class="item-info">
+						<p class="item-info-title">平板电脑秒杀专场</p>
+						<p class="item-info-promo">爆款直降800</p>
+						<div class="item-info-btn"> 品牌秒杀 > </div>
+					</div>
+				</a>
+				<ul>
+					<li class="active"></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- <div class="brand-slider">
+				<div class="brand-img">
+					<div class="brand-slider-imgs">
+						<a href="#"><img src="img/haigou1.jpg" class="brand-sliderImg"></a>
+					</div>
+				</div>
+				<div class="circleAll">
+					<div class="circle">●</div>
+					<div class="circle">●</div>
+					<div class="circle">●</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+
+	<!-- 侧边固定导航栏 -->
+	<div class="fixedNav">
+		<ul>
+			<li class="fixN1"><a href="javascipt::">京东秒杀</a></li>
+			<li class="fixN2"><a href="javascipt::">特色优选</a></li>
+			<li class="fixN3"><a href="javascipt::">频道广场</a></li>
+			<li class="fixN4"><a href="javascipt::">为你推荐</a></li>
+			<li><a href="#">🙂<br>客服</a></li>
+			<li><a href="#">✍<br>反馈</a></li>
+			<li><a href="#headnav">∧<br>顶部</a></li>
+		</ul>
+	</div>
+
+	<!-- 每日特价  品牌闪购 -->
+	<div id="daily_price" class="body-margin">
+		<div class="fore1">
+			<div class="daily_price_text">每日特价
+				<a href="#">
+					<div class="r-icon"></div>
+				</a>
+			</div>
+			<div class="daily_price_tit">
+				<ul>
+					<li>
+						<a href="#">精选</a>
+						<div class="day_price_con1 ">
+							<div class="list-left">
+								<div class="year-lowprice">一年最低价</div>
+								<img src="img/gangbi.jpg">
+								<div>英雄（HERO）钢笔</div>
+								<p>￥48</p>
+							</div>
+							<div class="list-right">
+								<div class="day_price_con_item">
+									<div><img src="img/fendiye.jpg"></div>
+									<div class="day_price_con_item_p">遮瑕保湿控油粉底液<p>￥9.9</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/xiangfen.jpg"></div>
+									<div class="day_price_con_item_p">法国进口车载香氛 净味<p>￥49.9</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/bolishui.jpg"></div>
+									<div class="day_price_con_item_p">【两瓶装】汽车防冻玻璃水<p>￥11.4</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/gaobangxie.jpg"></div>
+									<div class="day_price_con_item_p">【专柜品质】冬季高帮休闲鞋<p>￥11.4</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">美食</a>
+						<div class="day_price_con">
+							<div class="list-left">
+								<div class="year-lowprice">166天最低价</div>
+								<img src="img/putao.jpg">
+								<br>顺丰 阳光玫瑰普通<p>￥68.7</p>
+							</div>
+							<div class="list-right">
+								<div class="day_price_con_item">
+									<div><img src="img/chengzi.jpg"></div>
+									<div class="day_price_con_item_p">顺丰速发奉节脐橙<p>￥59</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/shijiaguo.jpg"></div>
+									<div class="day_price_con_item_p">顺丰 牛奶释迦果<p>￥38.6</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/putaoyou.jpg"></div>
+									<div class="day_price_con_item_p">台湾黄金葡萄柚5斤<p>￥25.8</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/xiangjiao.jpg"></div>
+									<div class="day_price_con_item_p">第二件9.9元广西小香蕉<p>￥12.9</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">百货</a>
+						<div class="day_price_con">
+							<div class="list-left">
+								<div class="year-lowprice">一年最低价</div>
+								<img src="img/baowendai.jpg">
+								<br>304不锈钢保温带<p>￥29</p>
+							</div>
+							<div class="list-right">
+								<div class="day_price_con_item">
+									<div><img src="img/baoxianmo.jpg"></div>
+									<div class="day_price_con_item_p">保鲜膜大卷厨房食品<p>￥10.6</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/penjing.jpg"></div>
+									<div class="day_price_con_item_p">玉树盆栽老桩盆景大型<p>￥33.6</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/shounagui.png"></div>
+									<div class="day_price_con_item_p">收纳柜加厚储物柜抽屉<p>￥87.9</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/shounakuang.jpg"></div>
+									<div class="day_price_con_item_p">5个收纳框(20*15*15)<p>￥20.9</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">个护</a>
+						<div class="day_price_con">
+							<div class="list-left">
+								<div class="year-lowprice">一年最低价</div>
+								<img src="img/ziyuan.jpg">
+								<br>滋源生姜强根健发<p>￥44</p>
+							</div>
+							<div class="list-right">
+								<div class="day_price_con_item">
+									<div><img src="img/huli.jpg"></div>
+									<div class="day_price_con_item_p">紧润丹私密护理资致妇女<p>￥49</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/gaoyou.jpg"></div>
+									<div class="day_price_con_item_p">金卧佛牌泰国青草膏油<p>￥22.4</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/yagao.jpg"></div>
+									<div class="day_price_con_item_p">佳洁士全优7效牙膏5支<p>￥17.9</p>
+									</div>
+								</div>
+								<div class="day_price_con_item">
+									<div><img src="img/Adidas.jpg"></div>
+									<div class="day_price_con_item_p">阿迪达斯沐浴露<p>￥23</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 品牌闪购 -->
+		<div class="fore2">
+			<div class="brand_list1">
+				<div class="daily_price_text">品牌闪购
+					<a href="#">
+						<div class="r-icon"></div>
+					</a>
+				</div>
+				<div class="brand-one">
+					<h3>小米有品大牌闪购</h3>
+					<p>爆款低至5折 | 仅剩2天</p>
+					<img class="brand00" src="img/brand00.png">
+				</div>
+			</div>
+			<div class="brand-list2">
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand1.png" alt="美旅闪购日">
+					</div>
+					<h6 class="brand-item_name">美旅闪购日</h6>
+				</a>
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand2.png" alt="认养一头牛狂欢购">
+					</div>
+					<h6 class="brand-item_name">认养一头牛狂欢购</h6>
+				</a>
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand3.png" alt="中国移动手机专场">
+					</div>
+					<h6 class="brand-item_name">中国移动手机专场</h6>
+				</a>
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand4.png" alt="Clarks品牌专场">
+					</div>
+					<h6 class="brand-item_name">Clarks品牌专场</h6>
+				</a>
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand5.png" alt="派克钢笔闪购专场">
+					</div>
+					<h6 class="brand-item_name">派克钢笔闪购专场</h6>
+				</a>
+				<a href="#">
+					<div class="brand-item_img">
+						<img src="img/brand6.png" alt="巴拉巴拉圣诞专场">
+					</div>
+					<h6 class="brand-item_name">乔丹运动专场</h6>
+				</a>
+			</div>
+
+
+		</div>
+	</div>
+
+	<!-- 发现好货 -->
+	<div class="body-margin find-new">
+		<div><img src="img/findnew.png"></div>
+
+		<div class="find-list find-list-swiper">
+			<ul id="find-list-ul">
+				<li>
+					<p><img src="img/erji.jpg" alt=""></p>
+					<p>Apple H1芯片 无线耳机</p>
+				</li>
+				<li>
+					<p>AOC触控电容 显示器</p>
+					<p><img src="img/AOC.jpg" alt=""></p>
+				</li>
+				<li>
+					<p><img src="img/luoji.png" alt=""></p>
+					<p>罗技 G903全新hero</p>
+				</li>
+				<li>
+					<p>月光宝盒 炫彩高清屏幕</p>
+					<p><img src="img/moonbox.jpg" alt=""></p>
+				</li>
+				<li>
+					<p><img src="img/suoni.jpg" alt=""></p>
+					<p>耳朵怀孕 索尼蓝牙耳机</p>
+				</li>
+				<li>
+					<p>Bose无线低音音响</p>
+					<p><img src="img/Bose.jpg" alt=""></p>
+				</li>
+				<li>
+					<p><img src="img/ipad2.jpg" alt=""></p>
+					<p>APPLE娱乐平板电脑</p>
+				</li>
+				<li>
+					<p>黑峡谷 凯华升级BOX</p>
+					<p><img src="img/blackbox.jpg" alt=""></p>
+				</li>
+				<li>
+					<p><img src="img/ASPIRE.jpg" alt=""></p>
+					<p>ASPPIRE 免接线 发电机</p>
+				</li>
+				<li>
+					<p>华为 原装正品 全网通</p>
+					<p><img src="img/huawei.jpg" alt=""></p>
+				</li>
+			</ul>
+			<!-- <div class="swiper-scrollbar"></div> -->
+		</div>
+	</div>
+
+	<!-- 新品首发等 四个盒子 -->
+	<div class="body-margin four-box">
+		<!-- 新品首发 -->
+		<div class="box new-good">
+			<h3 class="box_tit">新品首发<a href="#">
+					<div class="r-icon"></div>
+				</a></h3>
+			<!-- 切换按钮 -->
+			<div id="new-prev" class="slider_btn slider_prev" onclick="newPrev()"> <i>&lt;</i> </div>
+			<!-- 轮播内容 -->
+			<div class="new-good-slider">
+				<div class="po-rel">
+					<div class="new-good-imgs">
+						<div class="new-good-item"><a href=""><img src="img/new1.jpg" alt=""></a></div>
+						<div class="new-good-item"><a href=""><img src="img/new2.jpg" alt=""></a></div>
+						<div class="new-good-item"><a href=""><img src="img/new3.jpg" alt=""></a></div>
+						<div class="new-good-item"><a href=""><img src="img/recommend06.jpg" alt=""></a></div>
+						<div class="new-good-item"><a href=""><img src="img/recommend08.jpg" alt=""></a></div>
+						<div class="new-good-item"><a href=""><img src="img/recommend09.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="new-good-cons-f">
+					<div class="new-good-cons">
+						<div class="new-good-con new-good-con1">
+							<div class="new-good-name">美的（Midea）16升双增压零冷水燃气热水器天然气
+								自动变升磁化净水智能家电APP控制节能JSQ30-JM9 以旧换新</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>2898.00起</div>
+						</div>
+						<div class="new-good-con new-good-con2">
+							<div class="new-good-name">360儿童电话手表9X 智能语音问答定位支付手表
+								4G全网通20米专业级防水视频通话拍照手表男女孩星空蓝</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>379.00起</div>
+						</div>
+						<div class="new-good-con new-good-con2">
+							<div class="new-good-name">3凳子/坐垫</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>9.90起</div>
+						</div>
+						<div class="new-good-con new-good-con2">
+							<div class="new-good-name">4床单、四件套</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>888.00起</div>
+						</div>
+						<div class="new-good-con new-good-con2">
+							<div class="new-good-name">空气消毒喷雾</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>555.00起</div>
+						</div>
+						<div class="new-good-con new-good-con2">
+							<div class="new-good-name">森海赛尔(Sennheriser) MOMENTUM
+								真无线二代蓝牙主动降噪运动耳机 HIFI入耳式耳机</div>
+							<div class="new-good-re">来这里发现更多新品</div>
+							<div class="new-good-price"><span>￥</span>1999.00起</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 切换按钮 -->
+			<div id="new-next" class="slider_btn slider_next" onclick="newNext()"> <i>&gt;</i> </div>
+		</div>
+		<!-- JOY寻宝 -->
+		<div class="box JOYfind">
+			<h3 class="box_tit">JOY寻宝<a href="#">
+					<div class="r-icon"></div>
+				</a></h3>
+			<div class="JOY-con">
+				<ul>
+					<li>
+						<a href="#">换个新机</a>
+						<div class="JOY-con-list1">
+							<div class="JOY-con-list-item">
+								<img src="img/phone1.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【二手99新】小米11 双模5G手机 骁龙888 AMOLED四曲面柔性屏 1亿像素
+										黑色【赠30W快充】 8GB+256GB
+									</p>
+									<p class="joy_item_price"><span>￥</span>2439.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone2.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【二手99新】小米10至尊纪念版 双模5G 骁龙865手机
+										120HZ高刷新率 120倍长焦镜头 陶瓷黑
+									</p>
+									<p class="joy_item_price"><span>￥</span>3000.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone3.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										荣耀V20 外屏更换 换屏服务手机屏幕 华为外屏更换服务
+										换外屏送原厂电池【原厂配件 免费取送】
+									</p>
+									<p class="joy_item_price"><span>￥</span>269.<span>00</span></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">新机妙算</a>
+						<div class="JOY-con-list">
+							<div class="JOY-con-list-item">
+								<img src="img/phone4.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【苹果12期白条免息】Apple 苹果 iPhone 11(A2223)【苹果13敬请期待】白色 128G
+									</p>
+									<p class="joy_item_price"><span>￥</span>4269.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone5.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										vivo iQOO 7 5G手机【6期免息+送碎屏险】120W闪充骁龙888电竞手机iqoo7
+										黑境 12GB+256GB 【全网通标配版】
+									</p>
+									<p class="joy_item_price"><span>￥</span>3597.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone6.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										多亲（QIN） Qin 1s +AI学生电话VoLTE老人手机双卡双待
+										移动联通4G 功能直板手机 瓷白色
+									</p>
+									<p class="joy_item_price"><span>￥</span>379.<span>00</span></p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">手机控</a>
+						<div class="JOY-con-list">
+							<div class="JOY-con-list-item">
+								<img src="img/phone8.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【限量款丨无需贴膜】摩斯维 华为mate40pro手机壳磁吸玻璃保护套真素
+										皮全包硬防摔硬壳男女款 Mate40Pro【石墨黑】360°防摔丨店长推荐
+									</p>
+									<p class="joy_item_price"><span>￥</span>138.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone2.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【限量款丨无需贴膜】锐舞苹果12手机壳iphone 12全包镜头保护套超薄硅胶
+										玻璃透明防摔磁吸磨砂壳 【石墨黑】360°全包防护 航空防爆玻璃丨原机色铝金边框
+									</p>
+									<p class="joy_item_price"><span>￥</span>138.<span>00</span></p>
+								</div>
+							</div>
+							<div class="JOY-con-list-item">
+								<img src="img/phone7.jpg" alt="">
+								<div>
+									<p class="joy_item_name">
+										【华强北二代】酷泽尔Air无线蓝牙耳机适用苹果iPhone7p/8X/11/12洛达1536u
+										【2021新升级2代】弹窗配对/双通道无缝切换
+									</p>
+									<p class="joy_item_price"><span>￥</span>118.<span>00</span></p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 逛好店 -->
+		<div class="box nice-shop">
+			<h3 class="box_tit">逛好店<a href="#">
+					<div class="r-icon"></div>
+				</a></h3>
+			<div class="nice-shop-con">
+				<div class="nice-shop-con1">
+					<div class="nice-shop-con-name">
+						<p class="name_tit">小米京东自营旗舰店</p>
+						<div class="ziying">自营</div>
+						<p class="nice-shop-num">6057.6万人关注</p>
+					</div>
+					<div><img src="img/nice1_xiaomi.jpg"></div>
+				</div>
+				<div class="nice-shop-con2">
+					<div class="nice-shop-con-name">
+						<p class="name_tit">中国北斗地图自营店</p>
+						<div class="ziying">自营</div>
+						<p class="nice-shop-num">2.9万人关注</p>
+					</div>
+					<div><img src="img/nice2_book.jpg"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 领券中心 -->
+		<div class="box voucher-center">
+			<h3 class="box_tit">领券中心<a href="#">
+					<div class="r-icon"></div>
+				</a></h3>
+			<!-- <div class="voucher-bgd"></div> -->
+
+			<div>
+				<div class="voucher-bgd">
+					<!-- <div></div> -->
+					<div class=" voucher-middle">
+						<div class="voucher-item">
+							<!-- <div class="voucher-img"><img src="img/voucher3.jpg" alt=""></div>  -->
+							<a href="#">
+								<div class="voucher-con">
+									<div class="con-item1"><span>8.5</span> 折</div>
+									<div class="con-item2">满169元可用</div>
+									<div class="con-item3">仅可购买食品饮料部分商品</div>
+								</div>
+								<div class="voucher-more">
+									<div class="voucher-more-inner">更多好券</div>
+									<div class="voucher-more-arrow"> &gt; </div>
+								</div>
+							</a>
+						</div>
+						<div class="voucher-item">
+							<a href="#">
+								<div class="voucher-con">
+									<div class="con-item1"><span>9</span> 折</div>
+									<div class="con-item2">满200元可用</div>
+									<div class="con-item3">仅可购买部分厨具商品</div>
+								</div>
+								<div class="voucher-more">
+									<div class="voucher-more-inner">更多好券</div>
+									<div class="voucher-more-arrow"> &gt; </div>
+								</div>
+							</a>
+						</div>
+						<div class="voucher-item">
+							<a href="#">
+								<div class="voucher-con">
+									<div class="con-item1"><span>2</span> 折</div>
+									<div class="con-item2">满1元可用</div>
+									<div class="con-item3">仅可购买服饰内衣部分商品</div>
+								</div>
+								<div class="voucher-more">
+									<div class="voucher-more-inner">更多好券</div>
+									<div class="voucher-more-arrow"> &gt; </div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="voucher-bgd-bottom"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 频道广场 -->
+	<div id="channel-square">
+		<div class="channel-square">频道广场</div>
+		<div class="body-margin channel-square-fore1">
+			<div class="channel-square-list1">
+				<img src="img/channel01.png" alt="">
+				<!-- <div class="channel-square-tit">生鲜馆</div>
+				<div class="channel-square-con">爆款限时低价</div>
+				<img src="img/chengzi.jpg" alt=""> -->
+			</div>
+			<div class="channel-square-list1">
+				<img src="img/channel02.png" alt="">
+				<!-- <div class="channel-square-tit">京东图书</div>
+				<div class="channel-square-con">精选好书 畅享阅读</div>
+				<a><img src="img/book1.jpg" alt=""></a> -->
+			</div>
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>新机发布<span>&nbsp;有新机更有范</span></div>
+					<div><img src="img/phone1.jpg" alt=""> &nbsp; <img src="img/phone4.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>电脑办公<span>&nbsp;科技潮物 惠享不停</span></div>
+					<div><img src="img/Bose.jpg" alt=""> &nbsp; <img src="img/AOC.jpg" alt=""></div>
+				</div>
+			</div>
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>中外名酒<span>&nbsp;享全球美酒品美好生活</span></div>
+					<div><img src="img/jiu1.jpg" alt=""> &nbsp; <img src="img/jiu2.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>京东京造<span>&nbsp;京东自有品牌</span></div>
+					<div><img src="img/JDbrand1.jpg" alt=""> &nbsp; <img src="img/JDbrand2.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div class="body-margin channel-square-fore2">
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>京东京造<span>&nbsp;京东自有品牌</span></div>
+					<div><img src="img/JDbrand1.jpg" alt=""> &nbsp; <img src="img/JDbrand2.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>中外名酒<span>&nbsp;享全球美酒品美好生活</span></div>
+					<div><img src="img/jiu1.jpg" alt=""> &nbsp; <img src="img/jiu2.jpg" alt=""></div>
+				</div>
+			</div>
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>新机发布<span>&nbsp;有新机更有范</span></div>
+					<div><img src="img/phone1.jpg" alt=""> &nbsp; <img src="img/phone4.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>电脑办公<span>&nbsp;科技潮物 惠享不停</span></div>
+					<div><img src="img/Bose.jpg" alt=""> &nbsp; <img src="img/AOC.jpg" alt=""></div>
+				</div>
+			</div>
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>中外名酒<span>&nbsp;享全球美酒品美好生活</span></div>
+					<div><img src="img/jiu1.jpg" alt=""> &nbsp; <img src="img/jiu2.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>京东京造<span>&nbsp;京东自有品牌</span></div>
+					<div><img src="img/JDbrand1.jpg" alt=""> &nbsp; <img src="img/JDbrand2.jpg" alt=""></div>
+				</div>
+			</div>
+			<div class="channel-square-list3">
+				<div class="channel-square-list-item">
+					<div>电脑办公<span>&nbsp;科技潮物 惠享不停</span></div>
+					<div><img src="img/Bose.jpg" alt=""> &nbsp; <img src="img/AOC.jpg" alt=""></div>
+				</div>
+				<div class="channel-square-list-item">
+					<div>新机发布<span>&nbsp;有新机更有范</span></div>
+					<div><img src="img/phone1.jpg" alt=""> &nbsp; <img src="img/phone4.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 固定顶部为你推荐菜单栏 -->
+	<div class="fixedRecommend">
+		<a href="javascript::">
+			<div class="recommend-tit ">
+				<div id="ti01" class="divChange"><span>精选</span>
+					<p>猜你喜欢</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="ti02" class="recommend-tit-con"><span>智能先锋</span>
+					<p>大电器城</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="ti03" class="recommend-tit-con"><span>居家优品</span>
+					<p>品质生活</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="ti04" class="recommend-tit-con "><span>超市百货</span>
+					<p>百货生鲜</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="ti05" class="recommend-tit-con"><span>时尚达人</span>
+					<p>美妆穿搭</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="ti06" class="recommend-tit-con"><span>进口好物</span>
+					<p>京东国际</p>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<!-- 为你推荐 -->
+	<div id="recommend-for-you">
+		<div class="recommend-for-you">为你推荐</div>
+		<div class="body-margin">
+			<!-- 标题导航栏 -->
+			<div class="recommend-tit">
+				<div id="tit1" class="divChange"><span>精选</span>
+					<p>猜你喜欢</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="tit2" class="recommend-tit-con "><span>智能先锋</span>
+					<p>大电器城</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="tit3" class="recommend-tit-con "><span>居家优品</span>
+					<p>品质生活</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="tit4" class="recommend-tit-con "><span>超市百货</span>
+					<p>百货生鲜</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="tit5" class="recommend-tit-con"><span>时尚达人</span>
+					<p>美妆穿搭</p>
+				</div>
+				<div class="recommend-line"></div>
+				<div id="tit6" class="recommend-tit-con"><span>进口好物</span>
+					<p>京东国际</p>
+				</div>
+			</div>
+			<!-- 信息菜单列表 -->
+			<div class="recommend-cons">
+				<!-- 精选 -->
+				<div class="recommend-con1">
+					<div class="recommend-lk">
+						<a href="#">
+							<div class="recommend-list">
+								<img src="img/recommend01.jpg" alt="">
+								<p><span>自营</span>威猛先生(Mr Muscle)清新洁厕冻 1器+38g 柠檬</p>
+								<div>￥<span>22.</span>00</div>
+								<div></div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="#">
+							<div class="recommend-list">
+								<img src="img/recommend02.jpg" alt="">
+								<p>卡贝伯爵地垫门口入户门进门脚垫家用卫生间浴室门垫吸水防滑可裁剪 编号6 40*60厘米 </p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="#">
+							<div class="recommend-list">
+								<img src="img/recommend03.jpg" alt="">
+								<p><span>自营</span>Frosch薰衣草洁厕灵便器清洁剂 750ml 德国原装进口 </p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend04.jpg" alt="">
+								<p>卡贝伯爵毛绒地毯卧室少女耐脏主卧房间满铺网红床边阳台飘窗
+									垫加厚可定制 浅粉色 70*160厘米+厚+密</p>
+								<div>￥<span>155.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend06.jpg" alt="">
+								<p>卡贝伯爵学生坐垫软屁垫教室工厂久坐海绵垫子加厚防痛坐垫四
+									季通用可拆洗 努力 24*34cm(双搭扣)</p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend07.jpg" alt="">
+								<p>陶崇冶手机支架桌面 ipadpro平板电脑支撑架子 全铝合金属折
+									叠便携网课办公室家用 苹果华为小米 【太空银】金属折叠支架</p>
+								<div>￥<span>59.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend08.jpg" alt="">
+								<p>巧马加厚珊瑚绒四件套冬季单面加绒四件套床单法莱被套牛奶绒
+									床上用品 麋鹿 1.8床【四件套】被套200*230</p>
+								<div>￥<span>222.</span>66</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend09.jpg" alt="">
+								<p>健之素 消字号消毒液空气消毒400ml 家用除菌消毒喷雾家庭房</p>
+								<div>￥<span>39.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend10.jpg" alt="">
+								<p>酷极 新中式珐琅彩铜壁灯新中式电视壁灯沙发壁灯床头壁灯客
+									厅阳台过道走廊创意艺术灯饰 银杏款-h55*w14*s3.5-27W三色调光 </p>
+								<div>￥<span>825.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend01.jpg" alt="">
+								<p><span>自营</span>威猛先生(Mr Muscle)清新洁厕冻 1器+38g 柠檬</p>
+								<div>￥<span>22.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend02.jpg" alt="">
+								<p>卡贝伯爵地垫门口入户门进门脚垫家用卫生间浴室门垫吸水防滑可裁剪 编号6 40*60厘米 </p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend03.jpg" alt="">
+								<p><span>自营</span>Frosch薰衣草洁厕灵便器清洁剂 750ml 德国原装进口 </p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend04.jpg" alt="">
+								<p>卡贝伯爵毛绒地毯卧室少女耐脏主卧房间满铺网红床边阳台飘窗
+									垫加厚可定制 浅粉色 70*160厘米+厚+密</p>
+								<div>￥<span>155.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend06.jpg" alt="">
+								<p>卡贝伯爵学生坐垫软屁垫教室工厂久坐海绵垫子加厚防痛坐垫四
+									季通用可拆洗 努力 24*34cm(双搭扣)</p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend07.jpg" alt="">
+								<p>陶崇冶手机支架桌面 ipadpro平板电脑支撑架子 全铝合金属折
+									叠便携网课办公室家用 苹果华为小米 【太空银】金属折叠支架</p>
+								<div>￥<span>59.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend08.jpg" alt="">
+								<p>巧马加厚珊瑚绒四件套冬季单面加绒四件套床单法莱被套牛奶绒
+									床上用品 麋鹿 1.8床【四件套】被套200*230</p>
+								<div>￥<span>222.</span>66</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend09.jpg" alt="">
+								<p>健之素 消字号消毒液空气消毒400ml 家用除菌消毒喷雾家庭房</p>
+								<div>￥<span>39.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend10.jpg" alt="">
+								<p>酷极 新中式珐琅彩铜壁灯新中式电视壁灯沙发壁灯床头壁灯客
+									厅阳台过道走廊创意艺术灯饰 银杏款-h55*w14*s3.5-27W三色调光 </p>
+								<div>￥<span>825.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 智能先锋 -->
+				<div class="recommend-con recommend-con2">
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend10.jpg" alt="">
+								<p>酷极 新中式珐琅彩铜壁灯新中式电视壁灯沙发壁灯床头壁灯客
+									厅阳台过道走廊创意艺术灯饰 银杏款-h55*w14*s3.5-27W三色调光 </p>
+								<div>￥<span>825.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend09.jpg" alt="">
+								<p>健之素 消字号消毒液空气消毒400ml 家用除菌消毒喷雾家庭房</p>
+								<div>￥<span>39.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend08.jpg" alt="">
+								<p>巧马加厚珊瑚绒四件套冬季单面加绒四件套床单法莱被套牛奶绒
+									床上用品 麋鹿 1.8床【四件套】被套200*230</p>
+								<div>￥<span>222.</span>66</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend07.jpg" alt="">
+								<p>陶崇冶手机支架桌面 ipadpro平板电脑支撑架子 全铝合金属折
+									叠便携网课办公室家用 苹果华为小米 【太空银】金属折叠支架</p>
+								<div>￥<span>59.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend06.jpg" alt="">
+								<p>卡贝伯爵学生坐垫软屁垫教室工厂久坐海绵垫子加厚防痛坐垫四
+									季通用可拆洗 努力 24*34cm(双搭扣)</p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend04.jpg" alt="">
+								<p>卡贝伯爵毛绒地毯卧室少女耐脏主卧房间满铺网红床边阳台飘窗
+									垫加厚可定制 浅粉色 70*160厘米+厚+密</p>
+								<div>￥<span>155.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend03.jpg" alt="">
+								<p><span>自营</span>Frosch薰衣草洁厕灵便器清洁剂 750ml 德国原装进口 </p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend02.jpg" alt="">
+								<p>卡贝伯爵地垫门口入户门进门脚垫家用卫生间浴室门垫吸水防滑可裁剪 编号6 40*60厘米 </p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend01.jpg" alt="">
+								<p><span>自营</span>威猛先生(Mr Muscle)清新洁厕冻 1器+38g 柠檬</p>
+								<div>￥<span>22.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend10.jpg" alt="">
+								<p>酷极 新中式珐琅彩铜壁灯新中式电视壁灯沙发壁灯床头壁灯客
+									厅阳台过道走廊创意艺术灯饰 银杏款-h55*w14*s3.5-27W三色调光 </p>
+								<div>￥<span>825.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend09.jpg" alt="">
+								<p>健之素 消字号消毒液空气消毒400ml 家用除菌消毒喷雾家庭房</p>
+								<div>￥<span>39.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend08.jpg" alt="">
+								<p>巧马加厚珊瑚绒四件套冬季单面加绒四件套床单法莱被套牛奶绒
+									床上用品 麋鹿 1.8床【四件套】被套200*230</p>
+								<div>￥<span>222.</span>66</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend07.jpg" alt="">
+								<p>陶崇冶手机支架桌面 ipadpro平板电脑支撑架子 全铝合金属折
+									叠便携网课办公室家用 苹果华为小米 【太空银】金属折叠支架</p>
+								<div>￥<span>59.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend06.jpg" alt="">
+								<p>卡贝伯爵学生坐垫软屁垫教室工厂久坐海绵垫子加厚防痛坐垫四
+									季通用可拆洗 努力 24*34cm(双搭扣)</p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend04.jpg" alt="">
+								<p>卡贝伯爵毛绒地毯卧室少女耐脏主卧房间满铺网红床边阳台飘窗
+									垫加厚可定制 浅粉色 70*160厘米+厚+密</p>
+								<div>￥<span>155.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend03.jpg" alt="">
+								<p><span>自营</span>Frosch薰衣草洁厕灵便器清洁剂 750ml 德国原装进口 </p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend02.jpg" alt="">
+								<p>卡贝伯爵地垫门口入户门进门脚垫家用卫生间浴室门垫吸水防滑可裁剪 编号6 40*60厘米 </p>
+								<div>￥<span>19.</span>50</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend01.jpg" alt="">
+								<p><span>自营</span>威猛先生(Mr Muscle)清新洁厕冻 1器+38g 柠檬</p>
+								<div>￥<span>22.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 居家优品 -->
+				<div class="recommend-con recommend-con3">
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend11.jpg" alt="">
+								<p>瑞丹 卡通硅藻泥卫生间吸水地垫厕所进门脚垫速干浴室防滑垫
+									硅藻土垫子 熊熊bear-长方 40*60CM </p>
+								<div>￥<span>39.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend12.jpg" alt="">
+								<p><span>自营</span>妙然1器+6卷粘毛滚筒粘毛器可撕式衣服除毛粘尘纸除尘
+									器宠物毛发吸尘器 </p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend13.jpg" alt="">
+								<p><span>自营</span>婴舒宝 Insoftb 阿狸桃桃婴儿干湿|两用巾婴儿加厚棉柔
+									巾 一次性洗脸巾100抽 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend14.jpg" alt="">
+								<p><span>自营</span>美的（Midea）喆物麦饭石色涂层锅 家用电磁炉煤气
+									灶适用炒菜锅炒锅平底煎锅 香槟金28WOK302 典雅金</p>
+								<div>￥<span>79.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend17.jpg" alt="">
+								<p><span>自营</span>得宝(Tempo) 抽纸 4层90抽*(3+1)包 面巾纸餐巾纸巾 天然无香 </p>
+								<div>￥<span>17.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend18.jpg" alt="">
+								<p><span>自营</span>京东鲜花 设计师款混搭花束生日礼物 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend19.jpg" alt="">
+								<p><span>自营</span>雅高 鱼鳞抹布 5条装 擦玻璃清洁布百洁布吸水毛巾擦杯
+									子碗不易掉毛无痕水印洗碗不易掉毛无痕水印毛 40*30CM
+								</p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend11.jpg" alt="">
+								<p>瑞丹 卡通硅藻泥卫生间吸水地垫厕所进门脚垫速干浴室防滑垫
+									硅藻土垫子 熊熊bear-长方 40*60CM </p>
+								<div>￥<span>39.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend12.jpg" alt="">
+								<p><span>自营</span>妙然1器+6卷粘毛滚筒粘毛器可撕式衣服除毛粘尘纸除尘
+									器宠物毛发吸尘器 </p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend13.jpg" alt="">
+								<p><span>自营</span>婴舒宝 Insoftb 阿狸桃桃婴儿干湿|两用巾婴儿加厚棉柔
+									巾 一次性洗脸巾100抽 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend14.jpg" alt="">
+								<p><span>自营</span>美的（Midea）喆物麦饭石色涂层锅 家用电磁炉煤气
+									灶适用炒菜锅炒锅平底煎锅 香槟金28WOK302 典雅金</p>
+								<div>￥<span>79.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend17.jpg" alt="">
+								<p><span>自营</span>得宝(Tempo) 抽纸 4层90抽*(3+1)包 面巾纸餐巾纸巾 天然无香 </p>
+								<div>￥<span>17.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend18.jpg" alt="">
+								<p><span>自营</span>京东鲜花 设计师款混搭花束生日礼物 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend19.jpg" alt="">
+								<p><span>自营</span>雅高 鱼鳞抹布 5条装 擦玻璃清洁布百洁布吸水毛巾擦杯
+									子碗不易掉毛无痕水印洗碗不易掉毛无痕水印毛 40*30CM
+								</p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 超市百货 -->
+				<div class="recommend-con recommend-con4">
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend19.jpg" alt="">
+								<p><span>自营</span>雅高 鱼鳞抹布 5条装 擦玻璃清洁布百洁布吸水毛巾擦杯
+									子碗不易掉毛无痕水印洗碗不易掉毛无痕水印毛 40*30CM</p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend18.jpg" alt="">
+								<p><span>自营</span>京东鲜花 设计师款混搭花束生日礼物 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend17.jpg" alt="">
+								<p><span>自营</span>得宝(Tempo) 抽纸 4层90抽*(3+1)包 面巾纸餐巾纸巾 天然无香 </p>
+								<div>￥<span>17.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend14.jpg" alt="">
+								<p><span>自营</span>美的（Midea）喆物麦饭石色涂层锅 家用电磁炉煤气
+									灶适用炒菜锅炒锅平底煎锅 香槟金28WOK302 典雅金</p>
+								<div>￥<span>79.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend13.jpg" alt="">
+								<p><span>自营</span>婴舒宝 Insoftb 阿狸桃桃婴儿干湿|两用巾婴儿加厚棉柔
+									巾 一次性洗脸巾100抽 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend12.jpg" alt="">
+								<p><span>自营</span>妙然1器+6卷粘毛滚筒粘毛器可撕式衣服除毛粘尘纸除尘
+									器宠物毛发吸尘器 </p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend11.jpg" alt="">
+								<p>瑞丹 卡通硅藻泥卫生间吸水地垫厕所进门脚垫速干浴室防滑垫
+									硅藻土垫子 熊熊bear-长方 40*60CM </p>
+								<div>￥<span>39.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend19.jpg" alt="">
+								<p><span>自营</span>雅高 鱼鳞抹布 5条装 擦玻璃清洁布百洁布吸水毛巾擦杯
+									子碗不易掉毛无痕水印洗碗不易掉毛无痕水印毛 40*30CM</p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend18.jpg" alt="">
+								<p><span>自营</span>京东鲜花 设计师款混搭花束生日礼物 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend17.jpg" alt="">
+								<p><span>自营</span>得宝(Tempo) 抽纸 4层90抽*(3+1)包 面巾纸餐巾纸巾 天然无香 </p>
+								<div>￥<span>17.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend14.jpg" alt="">
+								<p><span>自营</span>美的（Midea）喆物麦饭石色涂层锅 家用电磁炉煤气
+									灶适用炒菜锅炒锅平底煎锅 香槟金28WOK302 典雅金</p>
+								<div>￥<span>79.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend13.jpg" alt="">
+								<p><span>自营</span>婴舒宝 Insoftb 阿狸桃桃婴儿干湿|两用巾婴儿加厚棉柔
+									巾 一次性洗脸巾100抽 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend12.jpg" alt="">
+								<p><span>自营</span>妙然1器+6卷粘毛滚筒粘毛器可撕式衣服除毛粘尘纸除尘
+									器宠物毛发吸尘器 </p>
+								<div>￥<span>15.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend11.jpg" alt="">
+								<p>瑞丹 卡通硅藻泥卫生间吸水地垫厕所进门脚垫速干浴室防滑垫
+									硅藻土垫子 熊熊bear-长方 40*60CM </p>
+								<div>￥<span>39.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 时装达人 -->
+				<div class="recommend-con recommend-con5">
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend16.jpg" alt="">
+								<p><span>自营</span>意尔嫚 加厚拼接地垫 泡沫拼图游戏爬行垫 客厅卧室宿
+									舍儿童爬爬垫子 榻榻米地毯 米+黄+藏青 30*30cm 9片装 </p>
+								<div>￥<span>19.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend20.jpg" alt="">
+								<p><span>自营</span>水星家纺 全棉被套 纯棉被罩被套单件 轻奢有度全棉抗
+									菌针织被套 灰200x230cm </p>
+								<div>￥<span>249.</span>00</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 进口好物 -->
+				<div class="recommend-con recommend-con6">
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend05.jpg" alt="">
+								<p><span>自营</span>茶花 卫生间纸巾盒 厕所抽纸盒大卷纸盒 厨房浴室卫生
+									间置物架免打孔擦手纸架 白色 1只装</p>
+								<div>￥<span>49.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="recommend-lk">
+						<a href="">
+							<div class="recommend-list">
+								<img src="img/recommend15.jpg" alt="">
+								<p><span>自营</span>新新精艺 圣诞装饰窗贴纸2张 圣诞快乐玻璃贴橱窗贴门
+									窗贴窗花剪纸 商场酒店学校平安夜节日场景布置用品 </p>
+								<div>￥<span>12.</span>90</div>
+							</div>
+						</a>
+						<!-- 找相似（隐藏） -->
+						<div class="recommend_hover">
+							<div class="recommend_hover_delete"></div>
+							<div class="recommend_hover_hd">
+								<div class="recommend_hover_btn">
+									<i class="recommend_hover_icon"></i>
+									<span>找相似</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 底部信息栏 -->
+	<footer>
+		<div class="body-margin JD-service">
+			<div class="JD-service-tit">
+				<div><img src="img/JDservice01.png" alt="">品类齐全，轻松购物</div>
+				<div><img src="img/JDservice02.png" alt="">多仓直发，极速配送</div>
+				<div><img src="img/JDservice03.png" alt="">正品行货，精致服务</div>
+				<div><img src="img/JDservice04.png" alt="">天天低价，畅选无忧</div>
+			</div>
+			<!-- 京东服务具体内容 -->
+			<div class="JD-service-con">
+				<!-- 购物指南 -->
+				<div>
+					<div class="JD-service-con-tit">购物指南</div>
+					<div class="JD-service-cons">
+						<a href="">购物流程</a>
+						<a href="">会员介绍</a>
+						<a href="">生活旅行</a>
+						<a href="">常见问题</a>
+						<a href="">大家电</a>
+						<a href="">联系客服</a>
+					</div>
+				</div>
+				<!-- 配送方式 -->
+				<div>
+					<div class="JD-service-con-tit">配送方式</div>
+					<div class="JD-service-cons">
+						<a href="">上门自提</a>
+						<a href="">211限时达</a>
+						<a href="">配送服务查询</a>
+						<a href="">配送费收取标准</a>
+						<a href="">海外配送</a>
+					</div>
+				</div>
+				<!-- 支付方式 -->
+				<div>
+					<div class="JD-service-con-tit">支付方式</div>
+					<div class="JD-service-cons">
+						<a href="">货到付款</a>
+						<a href="">在线支付</a>
+						<a href="">分期付款</a>
+						<a href="">公司转账</a>
+					</div>
+				</div>
+				<!-- 售后服务 -->
+				<div>
+					<div class="JD-service-con-tit">售后服务</div>
+					<div class="JD-service-cons">
+						<a href="">售后政策</a>
+						<a href="">价格保护</a>
+						<a href="">退款说明</a>
+						<a href="">返修/退换货</a>
+						<a href="">取消订单</a>
+					</div>
+				</div>
+				<!-- 特色服务 -->
+				<div>
+					<div class="JD-service-con-tit">特色服务</div>
+					<div class="JD-service-cons">
+						<a href="">夺宝岛</a>
+						<a href="">DIY装机</a>
+						<a href="">延保服务</a>
+						<a href="">京东E卡</a>
+						<a href="">京东通信</a>
+						<a href="">京东座智能</a>
+					</div>
+				</div>
+				<div>
+					<div class="JD-service-con-tit">京东自营覆盖区县</div>
+					<div class="JD-service-cons">
+						<span>京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 京东帮助 -->
+		<div class="JD-help">
+			<a href="">关于我们</a>
+			<span class="JD-line">|</span>
+			<a href="">联系我们</a>
+			<span class="JD-line">|</span>
+			<a href="">联系客服</a>
+			<span class="JD-line">|</span>
+			<a href="">合作招商</a>
+			<span class="JD-line">|</span>
+			<a href="">商家帮助</a>
+			<span class="JD-line">|</span>
+			<a href="">营销中心</a>
+			<span class="JD-line">|</span>
+			<a href="">手机京东</a>
+			<span class="JD-line">|</span>
+			<a href="">友情链接</a>
+			<span class="JD-line">|</span>
+			<a href="">销售联盟</a>
+			<span class="JD-line">|</span>
+			<a href="">京东社区</a>
+			<span class="JD-line">|</span>
+			<a href="">风险社区</a>
+			<span class="JD-line">|</span>
+			<a href="">隐私政策</a>
+			<span class="JD-line">|</span>
+			<a href="">京东公益</a>
+			<span class="JD-line">|</span>
+			<a href="">English Site</a>
+			<span class="JD-line">|</span>
+			<a href="">Media & IR</a>
+		</div>
+		<div class="JD-info">
+			<div>
+				<a href="">京公网安备 11000002000088号</a>
+				<span class="JD-line">|</span>
+				<a href="">京ICP备11041704号</a>
+				<span class="JD-line">|</span>
+				<a href="">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+				<span class="JD-line">| </span>
+				<span>新出发京零 字第大120007号</span>
+			</div>
+			<div>
+				<span>互联网出版许可证编号新出网证(京)字150号</span>
+				<span class="JD-line">|</span>
+				<a href="">出版物经营许可证</a>
+				<span class="JD-line">|</span>
+				<a href="">网络文化经营许可证京网文[2020]6112-1201号</a>
+				<span class="JD-line">|</span>
+				<span>违法和不良信息举报电话：4006561155</span>
+			</div>
+			<div>
+				<span>Copyright © 2004 - 2021 京东JD.com 版权所有</span>
+				<span class="JD-line"> | </span>
+				<span>消费者维权热线：400606773</span>
+				<span class="JD-line">|</span>
+				<a href="">经营证照</a>
+				<span class="JD-line">|</span>
+				<span>(京)网械平台备字(2018)第00003号</span>
+				<span class="JD-line">|</span>
+				<a href="">营业执照</a>
+			</div>
+			<div>
+				<span>
+					<img src="img/d1.png" alt=""><a href="">Global Site</a>
+				</span>
+				<span class="JD-line"> | </span>
+				<span>
+					<img src="img/d2.png" alt=""><a href="">Сайт России</a>
+				</span>
+				<span class="JD-line">|</span>
+				<span>
+					<img src="img/d3.png" alt=""><a href="">Situs Indonesia</a>
+				</span>
+				<span class="JD-line">|</span>
+				<span>
+					<img src="img/d4.png" alt=""><a href="">Sitio de España</a>
+				</span>
+				<span class="JD-line">|</span>
+				<span>
+					<img src="img/d5.png" alt=""><a href="">เว็บไซต์ประเทศไทย</a>
+				</span>
+			</div>
+			<div>
+				<span>京东旗下网站：</span>
+				<a href="">京东钱包</a>
+				<span class="JD-line">|</span>
+				<a href="">京东云</a>
+				<span class="JD-line">|</span>
+				<span>网络内容从业人员违法违规行为举报电话：4006561155-3</span>
+			</div>
+		</div>
+	</footer>
+</body>
+<script src="js/slider.js"></script>
+<script src="js/date.js"></script>
+
+</html>
